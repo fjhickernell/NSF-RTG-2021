@@ -1,0 +1,1230 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%   NSF RTG  2021
+%  
+%
+%   Due:   June 1, 2021
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+
+\oddsidemargin 0.10in \evensidemargin -0.65in
+\textwidth 6.2in         % Width of text line.
+\topmargin 0.60in \headheight 0.0in \headsep 0.0in
+\textheight 8.5in        % Height of text (including footnotes and figures,
+\topskip 0.0in
+
+%  \usepackage{showkeys}
+\usepackage{color}
+\usepackage{amsmath, amssymb, latexsym, natbib}
+\usepackage{psfrag,epsfig,amsfonts,amsmath,latexsym,amsthm,amssymb,amscd,url }
+\usepackage{amsmath}
+\usepackage{bm}
+ 
+
+\newcommand{\F}{{\mathcal{F}}}
+\newcommand{\B}{{\mathcal{B}}}
+
+\newcommand{\eps}{\varepsilon} 
+
+\renewcommand{\k}{\kappa}
+\newcommand{\p}{\partial}
+\newcommand{\D}{\Delta}
+\newcommand{\om}{\omega}
+\newcommand{\Om}{\Omega}
+\renewcommand{\phi}{\varphi}
+\newcommand{\e}{\epsilon}
+\renewcommand{\a}{\alpha}
+\renewcommand{\b}{\beta}
+\newcommand{\N}{{\mathbb N}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\T}{{\mathbb T}}
+
+\newcommand{\Le}{L_t^{\alpha}}
+
+\newcommand{\EX}{\mathbb{E}}
+\newcommand{\PX}{\mathbb{P}}
+
+
+\newcommand{\grad}{\nabla}
+\newcommand{\n}{\nabla}
+\newcommand{\curl}{\nabla \times}
+\newcommand{\dive}{\nabla \cdot}
+
+\newcommand{\ddt}{\frac{d}{dt}}
+\newcommand{\la}{{\lambda}}
+
+\newcommand{\bu}{\mathbf{u}}
+
+\newcommand{\obu}{\bar{\mathbf{u}}}
+\newcommand{\bsigma}{\mathbf{\sigma}}
+\newcommand{\btau}{\mathbf{\tau}}
+
+
+\newcommand{\nd}{{\nabla \cdot}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\x}{{\bm x}}
+
+\newcommand{\cF}{{\cal F}}
+\newcommand{\cG}{{\cal G}}
+\newcommand{\cD}{{\cal D}}
+\newcommand{\cO}{{\cal O}}
+
+%%%%%%%%%%%%%%
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+ \newtheorem{coro}[lemma]{Corollary}
+ \newtheorem{example}[lemma]{Example}
+ \newtheorem{remark}[lemma]{Remark}
+
+
+%%%%%%%%%%%%%%% %%%%%%%%%%%%%
+
+
+
+\newcommand{\uk}[1]{\ensuremath{u^{(#1)}(t,\omega)}}
+\newcommand{\hse}{\ensuremath{h^s(\xi,\omega)}}
+\newcommand{\hsk}[1]{\ensuremath{h^{(#1)}(\xi,\omega)}}
+
+\newcommand{\sz}{\ensuremath{ {\int_s^0 z(\theta_r (\omega))\,dr}}}
+\newcommand{\sZ}{\ensuremath{ {\int_s^0 Z(\theta_r (\omega))\,dr}}}
+\newcommand{\zz}[1]{\ensuremath{{z(\theta_{#1} (\omega))}}}
+\newcommand{\ZZ}[1]{\ensuremath{{Z(\theta_{#1} (\omega))}}}
+\newcommand{\fu}[1]{\ensuremath{{F_u^{u_0 (#1)}}}}
+\newcommand{\fus}[2]{\ensuremath{{\int^0_{#2} F_u^{u_0 (#1)}\,d{#1}}}}
+\newcommand{\fuss}[2]{\ensuremath{{\int^{#2}_0 F_u^{u_0 (#1)}\,d{#1}}}}
+
+\newcommand{\fuu}[1]{\ensuremath{{F_{uu}^{u_0(#1)}}}}
+\newcommand{\rb}{\right)}
+\newcommand{\lb}{\left(}
+\newcommand{\rB}{\right]}
+\newcommand{\lB}{\left[}
+
+
+\newcommand{\nb}{\mathbf{n}}
+\newcommand{\ub}{\mathbf{u}}
+\newcommand{\xb}{\mathbf{x}}
+\newcommand{\xnb}{\mathbf{x}_0}
+\newcommand{\GaB}{\mathbf{\Gamma}}
+
+\newcommand{\bo}{\mathcal {O}}
+\newcommand{\so}{\mathcal {o}}
+
+\newcommand{\BE}{\begin{equation}}
+\newcommand{\EE}{\end{equation}}
+\newcommand{\BEN}{\begin{equation*}}
+\newcommand{\EEN}{\end{equation*}}
+\newcommand{\BAL}{\begin{align}}
+\newcommand{\EAL}{\end{align}}
+\newcommand{\BAN}{\begin{align*}}
+\newcommand{\EAN}
+
+\newcommand{\s}{{\sigma}}
+\def\Tr{\mbox{Tr}}
+\newcommand{\Rn}{\mathbb{R}^n}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}  
+\title{RTG: Dynamics -- Deterministic to Stochastic, Particles to Continua, Classical to Quantum }
+\author{    }
+%  Department of Applied Mathematics,
+%\bigwedge   Illinois Institute of Technology     }
+%Chicago, IL 60616 \\
+%duan@iit.edu \\
+% www.iit.edu/\textasciitilde duan}
+
+\date{\today}
+ 
+\maketitle
+
+\tableofcontents
+
+
+\section{Introduction}
+Discuss the vision, scope, objectives, and anticipated impact of the program, at the local institution and beyond.
+
+
+
+Team: 
+Duan, Chun,  Wiggins,    Fred Hickernell (maybe), Georgia Papavasiliou (biomedical engineering, adjunct professor),
+Romit Maulik (Argonne Lab, Research Assistant Professor)
+ 
+Statistical physics: We have Jay Schieber (adjunct professor) 
+
+Chemical physics: Perhaps see it in the context of biophyiscs?
+
+Quantum mechanics： Great. Then we need to extend  the tittle and the scope.....
+
+Thoughts?
+
+
+
+
+
+A successful RTG proposal will:
+
+be based in a U.S. IHE that grants the Ph.D. in the mathematical sciences (faculty and trainees from other types of institutions may be included through a collaborative proposal or other mechanisms);
+
+be anchored in a coherent research program in the mathematical sciences;
+
+have a realistic plan showing how the proposed activity would create new or enhanced research-based training experiences in the mathematical sciences for the students and postdoctoral associates;
+
+be directed by a principal investigator, with at least two other faculty members, who will collaborate in management and participate fully in the RTG activities.
+
+
+A successful RTG proposal must convince reviewers that the project:
+
+integrates research with educational activities;
+
+provides for developing professional and personal skills, such as communication, teamwork, teaching, mentoring, and leadership;
+
+includes an administrative plan and organizational structure that ensures effective management of the project resources;
+
+has an institutional commitment to furthering the plans and goals of the RTG project and to create a supportive environment for integrative research and education;
+
+has a plan for recruitment, selection, and retention of participants, including members of underrepresented groups, so as to increase the number and diversity of U.S. citizens, nationals, and permanent residents in the graduate and postdoctoral programs;
+
+serves as a national model by effectively disseminating best practices for attraction, retention, and high-quality preparation of students and postdoctoral associates in the mathematical sciences; and
+
+has a post-RTG plan. The RTG program is intended to help stimulate and implement permanent positive changes in research training within the mathematical sciences in the U.S. Thus it is critical that an RTG site adequately plan how to continue the pursuit of RTG goals when funding terminates.
+
+
+
+\subsection{Illinois Tech Applied Mathematics Department}
+
+All of our 18 tenure-stream faculty are actively engaged in research and teaching. The research portfolio covers a broad range of applications, including fluids, waves
+
+
+\subsubsection{Applied Math BS and MS program}
+
+Our BS program
+
+Our MS program
+
+\subsubsection{Applied Math PhD program}
+
+Our department has a single PhD program in Applied  Mathematics
+
+
+Finally, our data show that the majority of our PhD recipients’ first job is in a non-academic position.
+We view our success in placing students in a broad range of institutions as a unique and positive indicator,
+which we want to maintain. The research topics and interdisciplinary approach should enhance opportunities
+for jobs in industry and national laboratories for our RTG students after graduation, and at the same time
+increase the number of PhD recipients going into high quality postdoctoral positions.
+
+
+\subsubsection{Postdocs}
+
+Currently the department has one named 2-year junior position (Junior Visiting Starr Faculty) with a heavy teaching load (2-2).
+
+
+\subsection{Illinois Tech resources relevant to this RTG}
+
+ $\bullet$ Center for Interdisciplinary Scientific Computation
+ 
+ $\bullet$ Laboratory for Stochastic Dynamics and Computation
+ 
+ 
+  $\bullet$  The Camras Scholars Program
+  
+  $\bullet$  Center for Learning Innovation 
+ 
+ 
+ $\bullet$  Illinois Tech Career Services
+ 
+ 
+ Argonne National Laboratory resources ....
+ 
+ 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Project Description  }
+
+We propose four research groups-- Dynamics  under uncertainty, 
+Lagrangian  dynamics, Energetic variational approaches,  and 
+Quantum dynamics.
+
+
+
+Innovative approaches for vertical-integration:
+
+1. ANL connection with track record: summer interns and quantum computing, HPC, climate group  -- will get a supporting letter from Valerie Taylor (MCS Director).
+
+2. High school , if needed:   Chicago Summer Science Camps for High school students  have been held every summer in our building!
+
+3.  Undergraduate students: Track record for students supported by Pritzker Institute for Biomedical Engineering and Science, and IIT IPPO project courses, and ANL  (some went to NYU, Courant, ...)
+
+4. MS and PhD, postdocs and long term (year long) visitors): Excel datasets from Faith
+
+5.  Research Activities: Chicago is in an ideal location--- we hosted 3 CBMS-NSF research conferences
+
+6. Connecting with MSF math Institute for Mathematical and Statistical innovation in Chicago
+
+7. Quantum: Undergraduate (co-taught with CS or Physics at IIT) and Graduate courses ...connect with ANL
+
+8. Virtual research forum or group: Even after Pandemic, many activities will continue to have an online version (hybrid).... so we can harness and benefit: joint activies with ANL and other places .... 
+ 
+ 
+
+
+
+
+Novel ideas for vertical integrated research and education activities, and collaborative learning.
+
+We have    track records in each.
+
+
+1. Undergraduate research 
+
+IIT has been hosting (with City of Chicago) summer science camps for high school students
+
+Argonne interships
+
+
+2. Graduate research 
+
+
+Argonne has been providing interships for our PhD students 
+
+
+3. Postdoctoral research
+
+Postdocoral fellows involve  supervise gradate students 
+
+
+4. What are innovative?
+
+YouTube channels for teaching and presentations
+
+Virtual Research Groups
+
+Joint online zoom workshops and seminars: Link to the  world 
+
+
+
+Argonne Lab internships
+
+Data science companies internships 
+
+
+
+{\bf Group configuration:} For each project, teams will consist of research faculty with at least one member
+outside the SMU Mathematics Department, SMU math undergraduate and graduate students, and a postdoctoral
+fellow. Whenever possible, other undergraduate and high-school participants of summer activities
+may be part of year-long activities. While there may be thematic driven differences on the approach to deliver
+knowledge and do research, each group share a similar year-round schedule that will allow awareness
+and exchange of ideas throughout the academic year, mainly at the RTG graduate seminar. There will also
+be a set of common courses that foment shared knowledge. Finally each summer program is centered on
+an intense 2-week period. Participating undergraduates will have a unique opportunity to work in a serious
+way on two topics, which we believe to be highly beneficial.
+
+
+\subsection{Research Projects}
+
+
+\subsubsection{Dynamics  under uncertainty} 
+
+{\bf Team:} Jinqiao Duan, Fred Hickernell, Romit Maulik ....
+
+{\bf Objective:} Develop methods to study and learn high dimensional stochastic dynamics, and apply to .....
+
+Interactions of uncertainty and nonlinearity leads to new phenomena; how to describe, quantify and predict random phenomena such as tipping, abrupt change or transitions; SDE/particle level vs PDE/continua level... incorporate data-driven approaches
+
+Machine learning for high dimensional stochastic dynamics using deterministic quantities or indexes 
+which are defined as mean or high dimensional integrals.
+
+Monte Carlo or MCMC
+
+Curse of dimensionality 
+
+
+
+  Complex systems in science and engineering
+  are often under the influence  of randomness, such as fluctuating forces, uncertain parameters, or random boundary conditions \cite{Moss, Horst, Gar, VanKampen3, WaymireDuan, Wong}.  Uncertainties may also be caused by our lack of knowledge of some
+  physical mechanisms  that are   not     well understood  and thus are not well
+represented (or missed completely) in the mathematical models
+\cite{Palmer1, ChenDuan, Kantz, Wilks, Williams}.
+
+
+
+
+
+Although these fluctuations and  unrepresented     mechanisms  may appear to be very small or very fast, their long time
+impact on the system evolution may be delicate or even profound \cite{Arnold, DuanBook2}. These
+delicate impacts on the overall evolution of dynamical  systems has
+been observed in, for example, stochastic bifurcation
+\cite{Crauel, CarLanRob01, Horst}, stochastic resonance \cite{Imkeller},
+ and  noise-induced pattern formation \cite{Gar, BlomkerStani}.
+Hence taking stochastic effects   into account is of
+central importance for   mathematical modeling of
+complex systems under uncertainty, and this leads to stochastic ordinary/partial  differential equations (SDEs or SPDEs)     \cite{Arnold, Ikeda, Oksendal, WaymireDuan}. It is therefore crucial to investigate dynamics under uncertainty, in the  context of   models arising from applications in, for example, geophysical and biological systems.
+
+
+ Complex systems
+  are often under the influence  of randomness  \cite{Moss1, Horst, Gar, VanKampen3}.  Uncertainties may also be caused by our lack of knowledge of some
+  physical processes  that are    not well represented  in the mathematical models
+\cite{Palmer1, ChenDuan, Kantz, Wilks, Williams}.
+Although these random     mechanisms    appear to be very small or very fast, their long time
+impact on the system evolution may be delicate or even profound \cite{Arnold, DuanBook2015}. These
+delicate impacts on the overall evolution of dynamical  systems has
+been observed in, for example, stochastic bifurcation
+\cite{Crauel, CarLanRob01, Horst}, stochastic resonance \cite{imkeller2002model},
+ and  noise-induced pattern formation \cite{Gar, blomker2003pattern}.
+Hence taking stochastic effects   into account is of
+central importance for   mathematical modeling of
+complex systems under uncertainty, and this leads to stochastic ordinary  differential equations (SDEs)     \cite{Arnold, Ikeda, Okse2003, WaymireDuan}. It is therefore crucial to investigate dynamics under uncertainty, in the  context of   models arising from applications in, for example, geophysical-climate   systems.
+
+Fluctuations in complex systems   are often
+{\bf non-Gaussian} \cite{Woy,Dit,Swinney,Shlesinger,taqqu,dybiec2009levy}
+rather than Gaussian.
+For instance, it has been argued
+that diffusion by geophysical turbulence \cite{Shlesinger}
+corresponds  to a series of  ``pauses", when the
+particle is trapped by a coherent structure, and ``flights" or
+``jumps" or other extreme events, when the particle moves in the jet
+flow. Paleoclimatic data \cite{Dit} also indicate such irregular
+processes. There are also experimental demonstrations of L\'evy flights  in optimal
+foraging theory and rapid geographical spread of emergent infectious
+disease.   Humphries {\it et. al.} \cite{Humphries}   used GPS to track the wandering
+black bowed albatrosses around an Island in Southern Indian Ocean to
+study the movement patterns of searching food.   They found that
+by fitting the data of the movement steps, the movement patterns
+obeys the power-law property with power parameter $\alpha=1.25$.
+To get the data set of human mobility that covers
+all length scales,  Brockmann   \cite{Brockmann}  collected data by online bill trackers, which
+  give successive spatial-temporal trajectory with a very high
+resolution. When fitting the data of probability of bill traveling
+at certain distances within a short period of time (less than one
+week), they found power-law distribution property
+with power parameter $\alpha=1.6$.
+This parameter is of great importance since by using it into the
+classic SIS model, they found probability density function patterns
+generated by non-local dispersal:  $\alpha-$stable L\'evy motions are
+strikingly similar to practical data of human influenza.
+A further example is a thermally activated motion of a test particle along
+a polymer,   shown in \cite{sokolov1997paradoxal, brockmann2002levy}
+to be subject to $\frac{1}{2}$-stable L\'evy motion
+due to polymer's self-intersections.
+In models of financial markets,
+L\'evy noises have started to play increasingly important role, see
+for example \cite{eberlein2001term}.
+
+This motivates the investigation of dynamical systems driven by non-Gaussian fluctuations, especially the heavy-tailed,  $\alpha-$stable   L\'evy motions $L_t^{\alpha}$,
+for $\alpha \in (0, 2)$. These are a physically important and special class of more general L\'evy motions   $L_t$  (defined as   stochastic processes with stationary
+and independent increments).
+Brownian motion $W_t$ is a Gaussian process, corresponding to the special case $\alpha=2$.
+
+
+%Every L\'evy motion has a version  whose sample paths of $L_t$ are almost surely right continuous with left limits.
+
+{\it Why $\alpha$-stable L\'evy noises?} \hspace*{0.3in}
+The nature of some underlying random fluctuations dictates that
+one has to model abrupt pulses or extreme events, beyond purely
+Gaussian noises. Infinitely divisible
+L\'evy motions provide a more general mathematical framework
+for these random fluctuations and are thought
+to be appropriate models for a class of important
+non-Gaussian processes with jumps \cite{Sato-99, Bertoin-98, taqqu}.
+
+\textbf{Goals}
+%Nonlocal Fokker-Planck equations:
+
+%Noisy fluctuations in complex systems are often non-Gaussian. Alpha-stable Levy motions (alpha is in the range of (0, 2)) are an important class of non-Gaussian fluctuations, which have been observed to appear in models for various physical, geophysical and biophysical systems.
+To understand   dynamics of an SDE with L\'evy noise, we propose
+to study the following macroscopic quantities using their corresponding
+deterministic integro-differential (nonlocal) equations:
+(1) Mean exit time (MET), (2) Escape probability, and  (3)   the time evolution of probability density function (Fokker-Planck equation).
+This leads to nonlocal equations,
+in which the usual Laplace operator is replaced
+by a nonlocal (or fractional) Laplace operator:  $-(-\Delta)^{\frac{\alpha}2  }$, for $\alpha \in (0, 2)$.
+Although being an integral operator,
+it has features of partial differential operators.
+
+%There is a wide interest in these nonlocal equations, from the PDE community, stochastic dynamics community, numerical analysis community, and modeling community.
+
+Both mean exit time and escape probability are described by nonlocal `elliptic' partial differential equations, with unusual boundary conditions corresponding to absorbing or escaping situations at microscopic levels.
+The probability density function for the solution of an SDE with  with L\'evy noise is   described by a nonlocal   Fokker-Planck equation.
+
+ %we could then quantify aspects of dynamical behaviors, such as transition phenomena between metastable states.
+
+\textbf{The Scope}
+To be specific, we consider the following SDE in $\R^d$:
+\begin{equation} \label{sde}
+{\rm d}X_{t}  =  f (X_{t})  {\rm d}t +  {\rm d} L_{t}, \;\; X_0 = x,
+\end{equation}
+ where $f$ is a vector field (or drift), and   L\'evy motion $L_{t}$  is   defined in a probability space $(\Omega, \mathcal{F}, \mathbb{P})$.  In this proposal,  we take L\'evy motion $L_{t}$  to include $\alpha$-stable L\'evy motion $L^\alpha_{t}$ as a special case.
+
+We investigate the behavior of the SDE \eqref{sde} by finding
+the quantities that can be determined via a deterministic equation.
+As shown later, these quantities include:
+\begin{enumerate}
+\item The first exit time from the spatial domain $D$  is defined by
+$\displaystyle
+\tau (\omega, x):= \inf \{t \geq 0, X_{t}(\om, x)  \notin D \}$,
+and the mean exit time is given by $u(x) := \EX \tau$.
+\item The likelihood of a particle (or a solution path $X_t$), starting at a point $x$,
+first escapes a domain $D$ and lands
+in a subset $E$ of $D^c$ (the complement of $D$) is called escape probability and is denoted as $P_E(x)$.
+\item  The transition probability density function
+is    the conditional probability
+density $p(x,t) = p(x, t|x_0, 0)$,  for the solution
+process $X_t$  starting at $x_0$ at time $0$.
+\item Suppose that together with the {\em state system}
+described by \eqref{sde}, we also have the {\em observation system} in $\R^k$ given
+by
+\begin{equation} \label{observe3}
+{\rm d}Y_t = g(X_t, t)\,{\rm d}t + {\rm d} W_t, \;\;   Y_0=y,
+\end{equation}
+where $g$ is a given `sensor'  vector field and $W_t$ is a Brownian motion. The observation system does not have L\'evy noise, as it is desirable to have a simple observing system.
+The unnormalized conditional probability density
+$p(x, t|Y_t)$ provides information for the system evolution.
+\end{enumerate}
+
+%\subsection{A Deterministic Approach}
+Let $L_t$ be a L\'evy process with the   triplet
+$(b, \Sigma, \nu)$, where $b \in \mathbb{R}^d$, $\Sigma=(\sigma_{ij})$
+is a positive
+definite symmetric $d\times d$ matrix and $\nu$ is a L\'evy measure
+on $\mathbb{R}^d-\{0\}$.
+In $d$-dimension, the L\'evy jump measure has the form
+$$
+  \nu(B) = \int_{S^{d-1}} \tau({\rm d}\theta) \int_0^\infty
+    \frac{\chi_B(r\theta)}{r^{1+\a}} \, {\rm d} r,
+$$
+for each Borel measurable $B$ in $\R^d$ where $\tau$ is a finite Borel measure
+on the unit sphere $S^{d-1}$. For the rotationally invariant case, it
+simplifies to
+\begin{equation}
+  \nu({\rm d}x) = \frac{\epsilon C_{d,\a}}{|x|^{d+\a}}\, {\rm d} x, \quad
+   \text{where } C_{d,\a} = \frac{\a\Gamma((d+\a)/2)}{2^{1-\a}\pi^{d/2}
+    \Gamma(1-\a/2)},
+\label{eq.measure}
+\end{equation}
+where $\epsilon$ is a positive constant.
+The corresponding generator $A$ has the form \cite{Apple}
+\begin{equation} \label{A}
+A  \phi(x) =  f_i \partial_i \phi(x)
+    + \frac{1}{2} \sigma_{ij} \partial_i \partial_j \phi(x)
+   + \int_{\R^d \setminus\{0\}} \left[\phi(x+ y)-\phi(x)
+      -  \chi_{\hat B} \; y_j\partial_j \phi(x) \right] \; \nu({\rm d}y),
+\end{equation}
+where $b$ is   included in
+the vector field $f$ in \eqref{sde}. The  nonlocal integral operator behaves like a fractional Laplace operator (\cite[Ch. 7]{DuanBook2015}) and is often denoted as $-(-\Delta)^{\frac{\alpha}2  }$.
+One can perform numerical simulations based on the SDE \eqref{sde} directly.
+Often, the main purpose of the simulations is to find the average
+or expected value of quantities of the stochastic processes. {\bf Our approach}
+is to find the same quantities using deterministic equations
+corresponding to the SDE. The {\bf advantages} of our  approach include:
+\begin{enumerate}
+\item Obtaining accurate solutions directly from the deterministic equations.
+As solutions are often smooth, one can develop arbitrarily high-order
+numerical schemes.
+\item Low computational cost compared with sample-wise numerical methods
+of solving SDEs for the same quantities such as the mean exit time
+as shown below.
+\end{enumerate}
+
+Next, we present the deterministic equations for a few quantities
+we propose to investigate.
+
+The mean   exit time $u(x)$  for a solution path (`a particle'), starting from   position $x$ in the domain $D$,  satisfies the deterministic nonlocal equation
+\cite{Apple,Sato-99,Naeh,Schuss,Oksendal3}
+\begin{eqnarray}
+ A u(x) = -1, \;\; \text{for } x\in D; \quad u =0, \;\; \text{for } x \in D^c,
+\label{exitdD}
+\end{eqnarray}
+where the integro-differential operator $A$ is defined in \eqref{A}.
+The escape probability $P_E(x)$ for a particle, starting at a point $x$,
+first escapes the domain $D$ and lands in a subset $E$ of $D^c$,
+satisfies the following nonlocal equation \cite{QiaoKan}
+\begin{eqnarray}
+ A\, P_E(x)=0, \,\, \text{ for } x \in D, \quad
+ P_E|_{x \in E}=1, \,\, P_E|_{x \in D^c\setminus E}=0. \label{eq.ep}
+\end{eqnarray}
+
+The Fokker-Planck equation for the SDE \eqref{sde} describes time evolution
+ for the   conditional probability
+density $p(x,t) = p(x, t|x_0, 0)$,   given by \cite[Ch. 7]{DuanBook2015} or \cite{Apple,Schertzer,wu,wu2}
+\begin{eqnarray}
+ \frac{\partial p}{\partial t} = A^* p, \;\;
+   \text{for } x\in D;
+  \quad p =0, \;\; \text{for } x \in D^c,
+\label{fpe}
+\end{eqnarray}
+where $A^*$ is the adjoint operator of the generator $A$.
+Here the auxiliary condition states that the particle disappears once outside
+the domain $D$, called absorbing boundary condition. If $D$ is the whole space
+$\mathbb{R}^d$, then no auxiliary condition is needed and we name it
+the natural boundary condition (at infinity).
+
+We emphasize that the proper auxiliary conditions
+for the equations \eqref{exitdD} and \eqref{eq.ep} cannot be defined
+only on the boundary of the domain $D$ as the traditional boundary conditions
+for PDEs. It has to be defined
+for the entire domain outside $D$ because of the nonlocal nature of
+the operator $A$ or, namely, the jump measure
+described by the symmetric $\alpha$-stable processes.
+This is in contrast to SDEs having (Gaussian) Brownian motion  only.
+Thus, our problem is different from those of imposing
+boundary conditions on the boundary of a domain only
+which implies a different stochastic process,
+for example, in
+\cite{ervin2007numerical,li2012finite,meerschaert2004finite,bueno2012fourier,yang2010numerical}.
+
+Finally, the unnormalized conditional   density
+$p(x, t|Y_t)$ satisfies the  Zakai equation  (\cite{QiaoDuan, Popa, Miku}):
+\begin{eqnarray} \label{Zakai}
+{\rm d}p(x, t|Y_t) = A^*p(x, t|Y_t) \; {\rm d}t + p(x, t|Y_t)\; g^T(x, t) {\rm d}Y_t,
+\end{eqnarray}
+where $p(x, 0|Y)$ is the initial  density of $X_t$,  and $ ^T$ represents `transpose' of the sensor vector function $g$.  This Zakai equation is the Fokker-Planck equations \eqref{fpe} together with an extra input term due to observation.
+
+
+
+
+
+
+
+\subsubsection{Lagrangian  dynamics}
+Quantifying transport and transition pathways, collective behaviors, connecting with Euler dynamics, ....  ocean, Arctic sea, and climate, incorporate data-driven approaches
+
+
+
+
+The dynamical systems approach to Lagrangian transport in fluids is now recognised and accepted as  an effective approach for diagnosing and analysing transport phenomena.   Originally, the approach was applied to simple kinematic models of two dimensional (2D) time-periodic flows, in \cite{aref1, ottbook, physrep}. The new insights that this method gave, even in this simple setting, motivated much mathematical and computational work on the extension of this approach to more realistic physical settings, e.g. 3D, complex time dependence, and the ability to use this approach to analyse flows in the form of data sets.
+These data sets might either be the output of high resolution data assimilating models or flows obtained from remote sensing capabilities, such as AVISO or HF radar,  as described in \cite{prl, mmw14, victor17}.
+The extension of the dynamical systems approach to the analysis of flows defined as data sets has led to  results that greatly extended the capabilities in areas of applications having a significant impact on society.
+In one particular example dynamical systems approach applied to ocean data sets  was used to develop a  strategy  leading to the prediction of the locations of landfall of an oil spill, as well as recommendations for the mitigation of the oil spill in an environmental `'event''  in the Canary Islands (\cite{GRMCW15}).  In another example  the dynamical systems approach was used to  construct, in real time, optimal glider paths, for autonomous underwater  vehicles (â€˜â€™glidersâ€™â€™). This has resulted in the achievement of a record glider speed (1 m/s) in a recent transatlantic glider mission (\cite{ramos2018}).
+
+Mathematically, the novelty of the dynamical systems point of view for Lagrangian transport arises (in 2D incompressible flows) from the recognition that the equations for fluid particles have the form of Hamilton's canonical equations, where the streamfunction plays the role of the Hamiltonian function. This analogy can be extended to 3D incompressible flows  if one considers non-canonical forms of Hamilton's equations ( \cite{mw1,Contact2017,Contact2019}). In both cases the â€˜â€™phase spaceâ€™â€™ of the Hamiltonian system is actually the physical space in which the fluid flows. This Hamiltonian dynamical systems point of view for Lagrangian transport immediately suggests that phase space structures such as elliptic periodic trajectories, hyperbolic periodic trajectories and their stable and unstable manifolds, and Kolmogorov-Arnold-Moser (KAM) tori have an immediate interpretation in terms of ``structures'' in the flow that determine the nature of Lagrangian transport and mixing. This provides an analytical and computational meaning for the notion of ``flow structures'' in fluid flows. For example, transversely intersecting stable and unstable manifolds of hyperbolic periodic trajectories are the flow structures that give rise to ``chaotic fluid particle trajectories'' through the construction on Smale horseshoes. Moreover, these intersecting stable and unstable manifolds give rise to ``partial'' barriers to transport and ``lobe dynamics''. KAM tori trap regions of fluid (therefore preventing them from ``mixing'' with surrounding fluid). KAM tori are found surrounding elliptic periodic trajectories (hence these are a ``signature'' of regions of unmixed fluid). This mathematical framework proved to be ideal for realizing the physical setting for mixing put forth earlier by \cite{reynolds1894study, eckart1948analysis, danckwerts}. \cite{ottino1994reynolds} has described in detail the physical picture of mixing first described by Reynolds and how it had to await the proper mathematical framework, i.e. dynamical systems theory, before it could be analyzed and exploited. Reviews of the dynamical systems approach to Lagrangian transport and mixing, mostly for two dimensional, time-periodic incompressible flows, can be found in \cite{aref1, aref2,ott1, wigginsCT, wo, sow}.
+
+ 
+   \textbf{The objective of this project:}
+
+
+ The objective of this proposed research is to develop this Lagrangian approach involving the combination of dynamical systems theory (both deterministic and stochastic) and data science in the context of studies of transport in  
+ Hamiltonian systems 
+ 
+ Perhaps high dimensional Hamiltonian systems, combining with data science approaches ..... 
+
+
+
+
+
+
+
+
+
+
+\subsubsection{Energetic variational approaches}
+For mechanical, physical and biophysical systems, preserve physical properties, Hamilton-Jacobi eqn, ...,  incorporate data-driven approaches
+
+
+\noindent {\bf Objective:} The research focus will be on the applications of the energetic variational approach in mathematical modeling, nonlinear partial differential equation, scientific computing and machine learning. The framework of energetic variational approach, originated from seminal works of Raleigh \cite{strutt1871some} and Onsager \cite{onsager1931reciprocal,onsager1931reciprocal2}, provides a paradigm to determine the dynamics of a non-equilibrium system from a prescribed energy-dissipation laws.%non-equilibrium systems for given 
+ The variational principle has been employed to study many complex fluids, such as liquid crystals, two-phase flows, and ionic fluids, which  involve the coupling and competition of various mechanical and chemical mechanisms in different scales \cite{lin2001static, feng2005energetic, LiLiZh05, Lin2007, liu2009introduction, du2009energetic, sun2009energetic, eisenberg2010energy, Giga2017, Liu2019, knopf2020phase}.
+
+For an isothermal closed system, an energy-dissipation law, comes from the first and second law of thermodynamics, is often given by $\frac{\dd}{\dd t} E^{\rm total} = - \triangle$,
+where $E^{\rm total}$ is the total energy, including both the kinetic energy $\mathcal{K}$ and the Helmholtz free energy $\mathcal{F}$, and $\triangle \geq 0$ is the rate of the energy dissipation which is equal to the entropy production in the situation. The energy-dissipation law, along with the kinematics relation, %describe all the physics and the assumptions for a given non-equilibrium system. 
+capture all specific physical and biological properties for a given non-equilibrium system. Starting with an energy-dissipation law, the EnVarA framework derives the dynamics of the systems through two variational principles, the Least Action Principle (LAP) and the Maximum Dissipation Principle (MDP). The LAP, which states the equation of motion for a Hamiltonian system
+can be derived from the variation of the action functional $\mathcal{A} = \int_{0}^T \mathcal{K} - \mathcal{F} \dd t$ with respect to the flow maps, gives a unique procedure to derive the conservative force for the system. The LAP is indeed an manifestation of the rule $\delta E = {\rm force} \cdot \delta x$. The MDP, variation of the dissipation potential $\mathcal{D}$, which equals to $\frac{1}{2}\triangle$ in the linear response regime, with respect to the rate (such as velocity), gives the dissipation force for the system. In turn, the force balance condition leads to the evolution equation to the system
+\begin{equation*}
+\frac{\delta \mathcal{D}}{\delta \x_t} = \frac{\delta \mathcal{A}}{\delta \x}.
+\end{equation*}
+% An advantage of using EnVarA the coupling and competition of  in different scales.
+The EnVarA can systematically deal with coupling and competition of mechanical, chemical and thermal mechanisms in different time scale in a thermodynamically consistent framework. Moreover, it provides an framework to quantify energy transduction between different processes.  
+
+\emph{The RTG faculty has the experience and relevant expertise to lead the project, as evidenced by relevant publications. We plan to focus on the modeling of active soft materials} Thermal effects ..
+
+\emph{The interdisciplinary nature of the team will provide an opportunity to have balanced training in different approaches of applied math, most notably multiscale modeling and analysis arising for the problems in biology and soft matter physics.}
+
+
+
+\noindent {\bf Introduction of Mathematical Theories of Complex Fluids  Course:}  A new graduate course will be developed on mathematical theories of complex fluids. Complex fluids is ubiquitous in our daily life and important in many industrial, physical and biological applications. Studying these materials requires a wide range 
+of tools and techniques for different disciplinary, even within mathematics. The course will covers Basic mechanics, non-equilibrium thermodynamics, multi-scale modeling and analysis, and modeling for liquid crystals, ionic fluids. The course will fill the gaps between ... and ... 
+
+
+
+\iffalse
+1. General energetic variational framework for complex fluids: 
+      a) least action principle and maximum dissipation principle. 
+      b) Navier-Stokes equations and elasticity. 
+      c) viscoelastic materials: nonlinear elasticity, incompressible elasticity, viscoelasticity. 
+      d) generalized diffusion, nonlocal diffusion.
+
+2. Free interface motion in the mixture of different fluids: 
+     a) conventional description: sharp interface description, water wave, vortex sheet, surface tensions. 
+     b) diffusive interface description: microscopic background (self-consistent field theory), Flory-Higgins theory, 
+         sharp interface limit, dynamics. 
+     c) slippery boundary conditions and systems on (or near) surfaces. 
+     d) Helfrich elastic bending energy and application to vesicle membranes. 
+
+3. Multiscale modeling and analysis: 
+     a) basis of stochastic differential equations: Fokker-Planck equations, diffusion, 
+         Smoluchowski coagulation equations, variational formulations, kinetic theory. 
+     b) micro-macro models for polymeric materials. 
+     c) moment closure methods, Mori-Zwanzig formulation and other coarse grain methods. 
+
+4. Ionic fluids and ion channels: 
+     a) electroeheological (ER) fluids: Poisson-Boltzman fluids, like charge attaction (LCA) and charge inversion, 
+         steric effects of ion particles, density function theory of Rosenfeld, equation of states. 
+     b) basic physiology of ion channels and protein structures. 
+     c) ionic fluids in ion channels. 
+     d) ionic osmosis in biological systems. 
+     \fi
+     
+\noindent {\bf Summer REU}: Liu is coordinating a summer REU program for underrepresented students in Chicago.
+He collaborated with local community colleges and Northeastern Illinois University for recruiting
+and training of these students.
+
+\noindent {\bf Regular group activities}: \emph{We propose to establish a weekly Multiscale Seminar. The key objectives will be to have students present articles relevant for the main topics of the project followed by a discussion of how the methods developed in our research could be applied to emerging areas of experimental research. This will enhance our students’ grasp of the important current research topics and potentially lead to new collaborations. We also propose that graduate students and postdoc regularly make short presentations on their research progress to all RTG participants, followed by a discussion of next steps in each individual research project.}
+
+\noindent {\bf Yearly workshop}:  A two-day workshop will be organized....
+
+\subsubsection{Mathematical Tools for a Dynamical Quantum World}
+\noindent
+{\bf Team.}
+\medskip
+
+\noindent
+{\bf Objective.} The development of quantum science and its exploitation in technology is a topic of great interest and activity in many countries. The United States \cite{raymer2019us}, Europe \cite{riedel2019europe}, and China \cite{kania2018quantum} have invested heavily in long term ‘’quantum initiatives’’.  It has been stated that we are in the midst of the ‘’second quantum revolution’’ \cite{kania2018quantum}. Indeed,  most people tend not to reaize just how much quantum mechanics influences their day-to-day life. For example, consider that standard household light bulb. Advances in light emitting diode (LED) technology have led to ‘’white’’ light bulbs that can now be purchased anywhere light bulbs are purchased. These LED light bulbs are more energy efficient, last longer, and are more environmentally friendly that light bulbs of the past. This is all thanks to quantum mechanics, which is fundamental to LED physics and technology. The impact of this rather mundane example is significant. But the impact of more complex physical and technological quantum advances, such as quantum computing, quantum cryptography, quantum sensors \cite{ng2020guest}, and even quantum artificial intelligence \cite{taylor2020quantum} will change the world and our way of life.
+
+Therefore it is essential in education nowadays that students develop a level of ‘’quantum literacy’’ that will enable them to interpret and evaluate these new phenomena and technologies in a way that will enable them to assess their impact, not only on their own  lives, but on society and the world. Developing this quantum literacy  in the context of mathematical education, not only at the undergraduate and graduate  university level, but also at the highschool level, is a goal of this RTG project.
+
+
+
+Quantum mechanics is not typically emphasized in most mathematics programs.  Indeed, many of the unusual properties of quantum mechanics, such as tunneling, entanglement, superposition of multiple states, interference of states, uncertainty, and quantum measurement can be understood from the fundamental physical principle of ‘’wave-particle’’ duality and de Broglie’s relation between the momentum and the wavelength of a particle.  From this one is led to the Schr\”odinger equation description of particles in terms of waves. In fact, the physical setting of quantum mechanics is described by a few (mathematical) axioms that describe the state space, observable quantities, measurement, and time evolution.  Once this physical setting is translated into mathematics, the implications and consequences of the mathematics is a natural setting for the participation of mathematicians. However, the required mathematical skills and knowledge are not typically emphasized or even covered in the relevant courses. A goal of this RTG is to remedy this situation, both through training undergraduate, graduate, and postdoctoral students, and through the development of new courses appropriate for mathematicians, but which bridge this gap.
+
+For example, it cannot be emphasized enough that Linear Algebra (Linear Space Theory in general) is fundamental to many areas of pure, applied, and computational mathematics, it is also fundamental to the structure of quantum mechanics. Of course, ‘’every’’ mathematics department has courses in Linear Algebra. However, topics important to quantum mechanics are often omitted. In particular, the basic structure of quantum mechanics is complex in nature—the solution of Schr\”{o}dinger’s equation is complex valued and linear spaces are complex vector spaces. This complex structure has implications for the nature of inner products, which are essential for quantum mechanics. Muli-particle quantum systems are essential for the notion of entanglement. In classical mechanics multi-particle systems are described by the cartesian product  of state spaces for each particle. In quantum nechanics they are described by a tensor product, and this algebraic structure tends not to be treated in traditional linear algebra courses, but it is essential for describing the basic elements, and showing the advantages of, quantum computation. The Schmidt decomposition provides an insightful characterization of entanglement based on tensor product spaces and its proof relies on the singular value decomposition, another topic of great importance (also in data science) that is typically neglected in a first linear algebra course (there is really no need to assume that all matrices are square).
+
+An extremely active and constantly evolving area that spans many disciplines of science of the study of the ‘’dynamics of transformation’’, of which chemical reaction theory is a central example. Chemical transformation is a dynamical phenomenon.  However, its conventional representation is static.  Chemists think of their reactions in terms of critical points (typically minima and saddle points) on a potential energy surface (PES).  Reactions are then treated as flows between these critical points, with the magnitudes of those flows being computed by approximate models developed between the 1920s and 1950s.  However, modern computational methods now allow for extremely sophisticated simulations of chemical transformation, routinely generating enormous quantities of data. Researchers increasingly find that the conventional models are qualitatively and quantitatively inadequate in predicting how transformation occurs. In recent years it has been shown that the phase space perspective of Hamiltonian dynamics can provide not only valuable insights but also predictive power. Moreover, this phase space approach provides a framework for understanding when quatum effects are important through the phase space formulation of quantum mechanics due Wigner, Weyl, Moyal, Groenewold, and others. We will provide training in the classical mechanical Hamiltonian formulation of chemical reaction in phase space \cite{agaoglou_chemical_2019} and show how this is a natural ‘’stepping off point’’ for the application, and further development, of the phase space formulation f quantum mechanics \cite{ waalkens2007wigner}. Specific research may involve classical potential energy functions corresponding to 2 degrees-of-freesom Hamiltonian bifurcations that are then solved in the quantum mechanical Schr\”odinger equation equation, with the phase space dynamics subsequently studied via the Wigner function formalism.
+
+All of our training and research will use the open source software QuTiP \url{http://qutip.org} and Qiskit \url{https://qiskit.org}, these are now standard tools for modelling and simulation.
+
+\medskip
+
+\noindent
+{\bf Creation of Two New Courses. }We will create two new courses that are appropriate for mathematics students. One will be the linear algebra course described above. This will be a tam effort and after the ground work has been set, an open source book will be produced through the “Book Sprint” process, \url{https://champsproject.com/2019/12/18/champs-book-sprint-december-6-9-2019/}, \url{https://champsproject.com/2020/07/27/champs-jupyter-book-lagrangian-descriptors-discovery-and-quantification-of-phase-space-structure-and-transport/}.
+The other course will be a course on  “Elementary Quantum Mechanics’ suitable for undergraduate students. A version of this course has previously been developed at the University of Bristol, and is available on YouTube \cite{https://www.youtube.com/playlist?list=PL6hB9Fh0Z1ELQy4WdFzlMcMD_XIb7C3no}.
+The course comes with its own open source textbook and solutions manual. The YouTube format provides the opportunity to engage the students in an active learning format where they view the “short) lectures ahead of time and the in person class time  is mainly questions, discussions, and problem solving.
+
+\medskip
+
+\noindent
+{\bf Targeted internships}: {\bf Blank for the moment.}
+
+\medskip
+\noindent
+{\bf Linkage to other projects}
+
+
+
+\subsection{RTG undergraduate components}
+
+\subsubsection{Undergraduate monthly meetings}
+We will create a monthly RTG-Undergraduate evening event for our SMU math majors. In the early fall,
+we will first give an overall presentation describing the RTG program with the goal of recruiting students.
+Subsequent meetings will include presentations from the Hegi Career Placement, the Hamilton Scholars
+Program, and the NASA research scholars program. By late fall, we will give brief presentations of the
+research topics of the RTG program, which will serve as an introduction of faculty members of the different
+groups. At the end of the fall term and for the first meeting in the spring, the meetings will concentrate on
+training and helping students apply to REUs and graduate programs. Throughout the academic year, there
+will be research presentations by RTG participants, mostly graduate students and postdoctoral fellows, with
+more emphasis during the spring term. This last component serves two main purposes: to expose undergraduate
+students to research and to prepare students for the four-week RTG summer program. The main
+objective of this activity will be to increase the number of SMU math majors applying to PhD programs.
+RTG funds will be used to provide food for these events, materials for presentations and advertising.
+
+\subsubsection{RTG Summer Program}
+With support from the RTG program we will run an in-house four-week undergraduate summer program.
+Targeted students will be sophomores and juniors. Each year the program will run as two all-day, two-week
+sessions, each on a single RTG topic. They will run during the summers of Years 1 to 3 so that each topic
+will be presented twice. Particulars on the format and content of each course are described in Section 2.1.
+We will support up to ten students, five from SMU and five from UTRGV, who will have the option of taking
+one or two of these sessions. We will budget for summer programs for Years 4 and 5 as well, but we reserve
+the right to update content within the core RTG topics. For each session, there will be a faculty member
+(identified in the budget) overseeing the smooth running of the camp. It is expected that most of the lectures
+and supervision of small projects will be done by a graduate student and a postdoctoral fellow. RTG funds
+will pay for room and board to participating students.
+
+\subsection{RTG graduate components}
+
+Each year, the RTG program will support three PhD students, each for their first three years in the
+PhD program. RTG students will be released from typical duties that pay for traditional assistantships, so
+that they can be fully committed to their coursework and regular RTG activities, primarily in the form of
+seminars and participation in one working group. By the end of Year 1, each RTG student will enroll in one
+of the groups and be assigned a faculty mentor from the corresponding team. They will be encouraged to
+participate in the summer program and will receive one month support to work on a research project. Year 2
+will still be focused on coursework with the expectation of continuing progress toward degree completion.
+Ideally, students will do an internship during the summer of Year 2 or Year 3. Students who do not have
+a summer internship will do in-house research along with active participation in the RTG summer program
+in the form of giving lectures and mentoring undergraduate students. By the end of Year 3, RTG students
+should pass qualifying exams and present their PhD proposal. They should also have participated in one to
+two workshops run by the CTE. In Year 4, students will be fully engaged in the dissertation work, expected
+to be in one of the core programs. They will also teach a section of Calculus with the support of a teaching
+mentor, who will observe a few classes and write a report. Summer 4 and Year 5 should focus on completing
+their dissertation and applying for jobs and postdoctoral fellowships.
+
+\textbf{Mentoring/Advising:} Each RTG graduate student will meet once a semester with our Director of Graduate
+Studies to monitor progress towards completion of the PhD. Selection of courses and committees of studies
+will be decided in conjunction with an assigned RTG faculty mentor who will also be responsible in identifying
+suitable summer internships. Advice on attending suitable workshops run by the CTE will be sought
+from CTE fellow Prof. Stigler. As for all PhD students, a faculty member will be asked to observe their
+teaching, provide feedback and prepare a report when applicable. RTG students will receive timely training
+on topics such as application to postdoc fellowships and industrial jobs.
+ 
+
+\subsection{RTG Seminar}
+Within the current weekly graduate seminar, we will insert an RTG component every other week. It
+will feature talks, mini-courses, and guest lectures aimed at fostering collaboration between all RTG teams.
+Consistent with the ongoing format, the responsibility of running it will be shared by RTG graduate students.
+Once a year, the RTG-graduate team will organize a seminar under the umbrella of the SMU/UT Dallas
+SIAM student Chapter. This will add to the Chapter activities and expose UTD graduate students to the
+SMU-RTG.
+
+\subsection{Postdoctoral component}
+Each RTG postdoctoral fellow will have two faculty mentors. One mentor will center on research activities
+(publications, research presentations, mentoring graduate students). A second faculty member will
+mentor on teaching by way of classroom visits and as with graduate students advising on suitable CTE workshops
+they should attend. All postdoctoral fellows will be assisted on their applications to jobs post-RTG.
+
+\subsection{Outreach}
+The SMU-RTG will partner with the School of Mathematical and Statistical Sciences at the HSI University
+of Texas Rio Grande Valley (UTRGV) to provide support to up to five undergraduate students each
+summer to attend our summer program.
+   
+
+\subsection{Conference participation}
+The RTG will provide travel support to RTG students and postdoctoral fellows to attend and present
+papers at conferences relevant to their research. We estimate for RTG students to receive support to one
+conference per year in the final 2 years of their studies and one conference per year to postdoctoral fellows.
+In addition, we will have regular participation of the SMU-RTG team, including undergrads, in the annual
+meeting of the SIAM Texas-Louisiana section [44]. This will be in the form of organizing symposia andRTG Seminar
+Within the current weekly graduate seminar, we will insert an RTG component every other week. It
+will feature talks, mini-courses, and guest lectures aimed at fostering collaboration between all RTG teams.
+Consistent with the ongoing format, the responsibility of running it will be shared by RTG graduate students.
+Once a year, the RTG-graduate team will organize a seminar under the umbrella of the SMU/UT Dallas
+SIAM student Chapter. This will add to the Chapter activities and expose UTD graduate students to the
+SMU-RTG. 
+   
+
+
+
+\subsection{Recruitment and Retention Plan}
+
+  \subsubsection{RTG graduate students}
+
+ 
+  \subsubsection{RTG undergraduate students} 
+  
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Performance Assessment Plan  }
+
+
+ In the assessment plan section, the proposal's goals must be clearly stated. This is necessary so that the National Science Foundation can verify, at the conclusion of the grant or another specified time, that the goals have been reached. This can be done if the goals are numerical, but other types of goals are acceptable as long as verification is not to be based on anecdotal evidence. The proposal's reviewers should have a clear picture of the present status of the research group's activity and how the activity would be enhanced should an award be made. This will be an important part of the review process.
+
+The structure and set of activities of this RTG presents a natural way to assess and monitor performance.
+We will specifically collect and evaluate data on the following metrics:
+\textbf{Undergraduate participation}
+• number of students participating in the monthly Undergraduate meetings
+• number of undergraduate students participating in the monthly meetings that apply and enroll in summer
+REUs
+• number of students participating in the Summer SMU-RTG program
+• number of students who took part in any SMU-RTG activity that apply and enroll in a graduate program
+
+\textbf{Graduate participation}
+• number of internship experiences of RTG participants
+• number of graduate degrees awarded to RTG graduate students and their time to graduation
+• number of RTG graduate students that applied for postdoctoral fellowships
+• a survey recording the first appointment post-PhD completion
+
+\textbf{Postdoctoral fellows}
+• a survey recording next employment post-RTG postdoctoral fellowship
+
+\textbf{Demographics}
+• number of under-represented minorities and women recruited to each part of the RTG program
+Scholarly output
+• number of publications in scholarly journals associated with the RTG program
+• number of RTG-related presentations at conferences and other institutions
+• number of proposals and success rates directly connected to RTG teams/research activities
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Organization and Management Plan }
+ 
+The management plan submitted in the proposal must contain a description of the actions that will be taken to achieve the goals set in the assessment plan. One basis for judging proposals will be the goals set and the likelihood that the actions described in the management plan will achieve them. This section should also contain information on the plans to recruit and retain U.S. students and members of underrepresented groups. 
+ 
+\subsubsection{Management Plan:}
+ The PI and 2 Co-PIs will oversee the running of the program. An RTG Director will be appointed. For
+this to work effectively, the Director will have a course release. The tentative rotation has A. Barreiro as
+RTG director on years 1 and 3, W. Cai on year 2 and Aceves on years 4 and 5. The Director will oversee
+the budget and assist in the running of RTG activities during the academic year. In the Spring semester
+the director will meet regularly with faculty in charge of the summer programs. These faculty members
+(2 in each year) will be responsible for the organization of summer activities.
+
+
+ \subsubsection{Dissemination:} 
+ We will create an RTG website that will include a schedule of activities, publications and highlight
+distinctions received by RTG participants. The website will link to other items of interest and a link will
+be created for recruitment purposes. Faculty giving invited talks, colloquia or other presentations, will be
+asked to include a slide advertising our RTG.
+
+ 
+ \subsubsection{Post-RTG plan.}
+
+With the support of the upper administration we will maintain the postdoctoral program with three
+fellows each with a 1-1 teaching load. The teaching component for RTG graduate students represents
+an increase in the number of classes taught by PhD students. Understanding the importance of having
+some teaching experience on their resume, we will work with the upper administration to offer both RTG
+stipends and teaching opportunities to all of our post-RTG PhD students. On the undergraduate front, we
+will maintain numbers in terms of Hamilton scholars and BS students applying to graduate school. Based on
+our final assessment of the summer program, if we see merit, we will apply for a follow-up REU proposal.
+For an overall assessment of the RTG we will keep contact for the next few years of all participants.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Broader Impacts}
+ 
+
+
+ Undergraduate students, graduate students, and postdoctoral fellows ....   
+ 
+
+.....
+
+Diversity, equity and inclusion
+
+ Working with Office of Community Affair to arrange some REU projects for underrepresented students in downtown Chicago.
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\section{Results from Prior NSF Support}
+
+
+  PI Duan summarizes relevant research results from  a   prior NSF grant.  NSF-1025422, \$216925, 2010-2014 -- \emph{CMG: Collaborative Research: Ocean Modeling by Bridging Primitive and Boussinesq Equations}.  Co-PI  Romit Maulik  does not have current NSF funding and has no NSF  award with an end date in the past five years.
+
+\subsection*{Intellectual Merit}
+
+\hspace{0.5cm} {\bf  $\bullet$ Geophysical flows: Mixing, transport  and subgrid-scale modeling } \cite{DuanAML2010}:
+Mixing in both coastal and deep ocean emerges as one of the
+important processes that determines the transport of pollutants,
+sediments and biological species, as well as the details of the
+global thermohaline circulation. Both the observations, due to
+their lack in space and time resolution, and most coastal and
+general circulation models, due to inadequate physics, can only
+provide partial information about oceanic mixing processes. A new
+class of nonhydrostatic models supplemented with physically-based
+Richardson number-dependent  subgrid-scale   closures, or
+so-called large eddy simulation is put forth as another tool of
+investigation to complement observational and large-scale modeling
+efforts. I  found that this subgrid-scale model leads to improved
+results with respect to those from direct numerical simulations,
+and  to   faithful reproduction of mixed water masses at all
+resolutions tested. A goal for this study is to build better ocean
+sub-models  useful for global  climate simulations.
+
+\medskip
+
+{\bf  $\bullet$  Quantifying the impact  of random boundary conditions on geophysical flows}
+\cite{CSun,SXu-JDuan}:
+Random influences may affect geophysical systems (including Boussinesq system) through boundary.  I  quantified these effects by estimating large deviation for rare events, computing dynamical indicators and physical characteristics, and examining asymptotic dynamical behavior.
+
+
+
+\medskip
+
+{\bf  $\bullet$ Stochastic dynamics inspired by geophysical  modeling} \cite{YongXuDuan, YongXu,  HaoDuan2, RenDuan2,   LiuDuan1,   Qiao, Qiao2, Qiao3, GaoTing2014, SunDuan3, ChenDuanFu}:
+I       quantified  the impact of non-Gaussian, heavy tailed, $\a-$stable L\'evy noise on system evolution in terms of mean exit time and escape probability. I     developed a numerical algorithm to compute mean exit time and escape probability.
+I   further investigated stochastic bifurcation and synchronization for a class of dynamical systems (with physical or biophysical background) driven by L\'evy motions.
+I   also obtained a sufficient condition for  bifurcation in a class of  random dynamical systems, including systems with $\alpha$-stable L\'evy noise, via an algebraic topological tool -- the Conley index.
+
+
+
+
+\subsection*{Broader Impacts}
+
+
+\hspace{0.5cm} \emph{Education and human resources development:}
+
+Three graduate students (two of them female) have been supported     by this   grant.   One undergraduate student,   Mike
+McCourt, was   supported by my grants and     wrote a paper with me
+and Manfred Denker on  Pseudorandom Numbers for Conformal
+Measures. Mike
+was awarded a NSF Graduate Research Fellowship and then went on to pursue
+  a PhD    degree in applied mathematics at Cornell University.
+
+
+\medskip
+
+ \emph{Benefits to Society:}
+
+A challenge in our society is to make decisions with uncertain or unreliable
+information. My research contributes to the general knowledge base
+for decision-making  under uncertainty, for example, in
+ weather forecasting and climate prediction.
+
+
+%This Laboratory fosters research and education in stochastic dynamics %and stochastic partial differential equations with applications   at %both graduate and undergraduate levels.
+
+%Additionally, we will sponsor one high school student annually  from
+%the Illinois Mathematics and Science Academy  (a public elite high
+%school in Illinois)   for research in stochastic-statistical modeling     for   %the Westinghouse Competition in Mathematics.
+
+\medskip
+
+ \emph{Integrating education and research:}
+
+I have   offered a  graduate course ``Math 545 ---  Stochastic
+Partial Differential Equations", which led to the publication of PI Duan's new book
+``Effective Dynamics of Stochastic Partial Differential Equations" (Elsevier, 2014).   This course   emphasized modeling and dynamical systems approaches.   Concrete examples in geophysical flows
+and climate dynamics were used throughout  the course to motivate and illustrate the concepts and techniques.
+
+
+
+
+
+\subsection*{Publications Resulting from the Prior NSF Support}
+ Our publications resulting from this support include  \cite{DuanAML2010,  ChenDuan2010,  SunDuanLi2010, SunDuan2, SunDuan3,   ChenDuanFu,  JYangDuan,  LiuDuan1, YongXuDuan, YongXu,  HaoDuan2, RenDuan2,   Qiao, Qiao3, GaoTing2014}.
+
+The     data   from this award: Numerical software and data are archived according to IIT Data Management Plan. The publications are available online at the journals' websites and additionally on arXiv.org.
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Supplementary Documentation}
+
+These documents will be directly uploaded on Fastlane:
+
+\subsection{a. Letters of Collaboration}
+
+--- from Argonne Lab
+
+
+Signed letters of collaboration by the institution and other sources in support of the project should be included. If industrial or government laboratory internships are planned, letters indicating the willingness of the external organization and of individual external mentors (if known) to participate should also be included. These documents should be scanned and uploaded into the supplementary documentation section.
+The letters of collaboration are meant to explain how the institution and the collaborating sites will provide an environment that supports the proposed research and training activities. It is acceptable for a letter of collaboration to briefly mention specific activities supported by the collaboration and listed in the proposal; however, each letter is limited to one page. Letters of recommendation or endorsement are not allowed.
+
+\subsection{b. Trainee Data} 
+
+All applicants are strongly encouraged to supply the following data. Note that data is requested for the group submitting the proposal, not for the entire department. For new RTG proposals, data should be included for the past five years. For a renewal of an existing RTG grant, data should be included for the past ten years.
+A list of Ph.D. recipients, along with each individual's baccalaureate institution, time-to-degree, post-Ph.D. placement, and thesis advisor.
+A list of postdoctoral associates (including holders of named instructorships and 2- or 3-year terminal assistant professors), their Ph.D. institutions, postdoctoral mentors, and post-appointment placements.
+The dollar amount of funding by federal agencies for Research Experiences for Undergraduates (REUs), graduate students, and postdoctoral associates.
+
+
+\subsubsection{A list of undergraduate students with REU experience}
+
+Duan:  Undergraduate Research Supervision
+
+Diana Harold, 
+
+Angeliki Ermogenous, 
+
+Mike McCourt, 
+
+Hee Seo,
+
+Jaekwan Lee,  
+
+Kun Huang,
+
+Stanley Nicholson
+
+Alex Negron
+
+
+
+
+Wiggins: Undergraduate Research Supervision
+
+ 
+
+ 
+
+Atanasiu Stefan Demian, Undergraduate in Mathematics at the University of Bristol, graduated 2019.
+
+ 
+
+Publications as an undergraduate researcher.
+
+ 
+
+Demian, Atanasiu Stefan, and Stephen Wiggins. "Detection of periodic orbits in Hamiltonian systems using Lagrangian descriptors." International Journal of Bifurcation and Chaos27, no. 14 (2017): 1750225.
+
+ 
+
+Tani is currently a DPhil Medical Sciences student at University of Oxford, in the Computational Biology group at the Weatherall Institute of Molecular Medicine.
+
+ 
+
+Wenyang Lyu, Undergraduate in Mathematics at the University of Bristol, graduated 2020.
+
+ 
+
+Publications as an undergraduate researcher.
+
+ 
+
+Lyu, Wenyang, Shibabrat Naik, and Stephen Wiggins. "UPOsHam: A Python package for computing unstable periodic orbits in two-degree-of-freedom Hamiltonian systems." Journal of Open Source Software 5, no. 45 (2020): 1684.
+
+ 
+
+Lyu, Wenyang, Shibabrat Naik, and Stephen Wiggins. "The role of depth and flatness of a potential energy surface in chemical reaction dynamics." Regular and Chaotic Dynamics25, no. 5 (2020): 453-475.
+
+ 
+
+Lyu, Wenyang, Shibabrat Naik, and Stephen Wiggins. "Hamiltonian pitchfork bifurcation in transition across index-1 saddles." arXiv preprint arXiv:2102.10933 (2021).
+
+ 
+
+Lyu, Wenyang, Shibabrat Naik, and Stephen Wiggins. "Elementary exposition of realizing phase space structures relevant to chemical reaction dynamics." arXiv preprint arXiv:2004.05709 (2020). (This was Lyu’s summer undergraduate project after his second year.)
+
+ 
+
+ 
+
+Lyu is currently a PhD student in Statistical Science at the University of Bristol
+
+ 
+
+ 
+
+Rebecca Crossley, Undergraduate in Mathematics at the University of Bristol, will graduate in summer 2021.
+
+ 
+
+ 
+
+Publications as an undergraduate researcher.
+
+ 
+
+Crossley, Rebecca, Makrina Agaoglou, Matthaios Katsanikas, and Stephen Wiggins. "From Poincaré Maps to Lagrangian Descriptors: The Case of the Valley Ridge Inflection Point Potential." Regular and Chaotic Dynamics 26, no. 2 (2021): 147-164.
+
+ 
+
+ 
+
+Rebecca will begin a Ph.D. programme in mathematical biology at Oxford University in Autumn, 2021.
+
+ 
+
+Yibin Geng, Undergraduate in Mathematics at the University of Bristol, will graduate in summer 2021.
+
+ 
+
+ 
+
+Geng, Y., M. Katsanikas, M. Agaoglou, and S. Wiggins. "The influence of a pitchfork bifurcation of the critical points of a symmetric caldera potential energy surface on dynamical matching." Chemical Physics Letters 768 (2021): 138397.
+
+ 
+
+Geng, Y., M. Katsanikas, M. Agaoglou, and S. Wiggins,. “The bifurcations of the critical points and the role of the depth in a symmetric Caldera potential energy surface”. Submitted to International Journal of Bifurcation and Chaos.
+
+ 
+
+Yibin has received offers for the PhD programmes at Oxford, Cambridge, and Imperial College for  Autumn, 2021.
+
+ 
+
+ 
+
+ 
+
+Cate Mandell, Undergraduate in Mathematics at the University of Bristol, will graduate in summer 2022.
+
+ 
+
+Publications as an undergraduate researcher.
+
+ 
+
+ 
+
+Mandell, Cate, and Stephen Wiggins. "The Role of Time-Dependent Phase Space Structures in Reaction Dynamics and the No-Recrossing Property of Dividing Surfaces." International Journal of Bifurcation and Chaos 31, no. 04 (2021): 2150064.
+
+
+
+
+\subsubsection{A list of graduate students}
+
+
+\subsubsection{A list of postdoctoral associates}
+  
+  (including holders of named
+     instructorships and 2- or 3-year terminal assistant professors),
+     their Ph.D. institutions, postdoctoral mentors, and post-appointment
+     placements.
+
+     I know those from 2017. Can you check and keep it as a record?
+
+     1) From Duan's group
+     
+     Jessica Xia 
+     
+     
+     2) From Chun’s group:
+
+     Stefan Metzger: 8/2017 — 8/2018, FAU ( Friedrich-Alexander
+     University, Erlangen-Nurnberg), FAU
+     Qing Cheng: 1/2019 — 1/2021, Xiamen University, Purdue University
+     Yiwei Wang: 8/2018 — present, Peking University, IIT
+
+     2) From Igor’s group
+
+     Hyun-Jung Kim, 8/2018  — 8/2020, USC, UCSB
+
+     3) From Sonja’s group
+
+     Sara Jamshidi: 8/2018 — 8/2020, Penn State, Lake Forest College
+
+     4) From Shuwang’s group
+
+     Pedro Anjos: 8/2019 — present, Federal University of Pernambuco, IIT.
+
+
+
+
+\subsection{Quantitative Demographic Data}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+\pagenumbering{arabic}
+\renewcommand{\thepage} {\arabic{page}}
+
+\bibliographystyle{abbrv}
+% \bibliographystyle{plain}
+%\bibliographystyle{natbib}
+\bibliography{stochas,ml_ref,datasci, VD, quantum}
+%\bibliography{ref_art,stochas,asi,ml_ref,datasci}
+
+\end{document}
