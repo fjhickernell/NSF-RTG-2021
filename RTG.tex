@@ -278,7 +278,8 @@ Our university has the following resources to support this RTG.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Research Projects } 
+\section{Research Projects } \label{sec:researchproblems}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 We propose three research projects under the umbrella of complex dynamical systems: (1) dynamics under uncertainty; (2) energetic variational approaches for complex dynamics; and (3) mathematical tools for quantum dynamics. Project 1 connects with Project 2 via minimizing action functionals. In Project 3, we examine the interplay of quantum uncertainty and external fluctuations, and further consider a Bohmian trajectory formulation of quantum dynamics, thus linking with Project 1. 
 
@@ -299,7 +300,7 @@ way on two topics, which we believe to be highly beneficial.
 Jinqiao Duan (leader), Fred Hickernell, Michael Pelsmajer, Romit Maulik (Illinois Tech and Argonne National Lab),  
  Mustafa Bilgic (Illinois Tech Computer Science) and Prasanna Balaprakash (Argonne National Lab), together with one or more undergraduate students, one or more PhD students, and a postdoctoral fellow.  
 
-\subsubsection*{Objective:} The interactions of uncertainty and nonlinearity lead to intriguing phenomena, such as  transitions   between  different dynamical regimes. We develop modeling, analytical, computational and data science  methods to quantify     stochastic dynamics, with applications to chemical \cite{agaoglou_chemical_2019}, biophysical \cite{Ruoff2018BiologicalCR}, powergrid infrastructures \cite{MEDJROUBI201714}, and climate systems \cite{Alexandrov2020NonlinearCD, Franzke2017NonlinearAS, Wan2020ADF}. 
+\subsubsection*{Objective} \FredNote{This subsubsection seems more like background.  I do not see an objective.}The interactions of uncertainty and nonlinearity lead to intriguing phenomena, such as  transitions   between  different dynamical regimes. We develop modeling, analytical, computational and data science  methods to quantify     stochastic dynamics, with applications to chemical \cite{agaoglou_chemical_2019}, biophysical \cite{Ruoff2018BiologicalCR}, powergrid infrastructures \cite{MEDJROUBI201714}, and climate systems \cite{Alexandrov2020NonlinearCD, Franzke2017NonlinearAS, Wan2020ADF}. 
  
 Complex systems are oftentimes under the influence  of randomness or uncertainty \cite{Moss1, Horst, Gar, VanKampen3}. Uncertainties may also be caused by our lack of knowledge of some physical processes that are not well represented in the mathematical models (epistemic) and due to the inherent randomness of a specific event  \cite{Palmer1, Kantz, Wilks, Williams}.
 Although these random mechanisms appear to be very small or very fast, their long time impact on the system evolution may be delicate or even profound \cite{Arnold, DuanBook2015}. These delicate impacts on the overall evolution of dynamical systems has been observed in, for example, stochastic bifurcation
@@ -307,9 +308,11 @@ Although these random mechanisms appear to be very small or very fast, their lon
  and  noise-induced pattern formation \cite{Gar, blomker2003pattern}.
 Hence taking stochastic effects   into account is of
 central importance for mathematical modeling of
-complex systems under uncertainty.   It is therefore crucial to investigate dynamics under uncertainty, in the context of models arising from applications in, for example, geophysical and biophysical systems. Fluctuations in these complex systems are often {\bf non-Gaussian} (modeled by L\'evy motion $L_t$) \cite{Woy,Dit, Shlesinger,taqqu,dybiec2009levy}, rather than Gaussian (modeled by Brownian motion $B_t$). This leads to a
+complex systems under uncertainty.   It is therefore crucial to investigate dynamics under uncertainty, in the context of models arising from applications in, for example, geophysical and biophysical systems. 
+
+Fluctuations in these complex systems are often \emph{non-Gaussian} (modeled by L\'evy motion $L_t$) \cite{Woy,Dit, Shlesinger,taqqu,dybiec2009levy}, rather than Gaussian (modeled, say, by Brownian motion $B_t$). \FredNote{Can we say briefly why, either from the application side?} This leads to a
  stochastic   differential equation (SDE)  \cite{Arnold,   Oksendal, DuanBook2015, Applebaum}
- with L\'evy motion as well as Brownian motion:
+ driven by a L\'evy motion as well as Brownian motion:
  $$
  dX_t= f(X_t) dt + g(X_t) dB_t + \sigma(X_{t-}) dL_t.
  $$
@@ -317,7 +320,7 @@ complex systems under uncertainty.   It is therefore crucial to investigate dyna
  When the noisy fluctuations are absent, we then have a   deterministic  dynamical system described by an ordinary differential equation (ODE): $ \frac{dx}{dt}=f(x).$
  
  
-Stochastic dynamical systems are also extremely relevant to several data science applications such as machine learning in the presence of significant noise. Therefore, in recent times, ordinary and stochastic differential equations, parameterized by neural networks, have been used for learning regression and classification tasks for noisy irregular datasets \cite{chen2018neural,rubanova2019latent,jia2019neural,tzen2019neural,look2020deterministic,liu2019neural}. Specifically, ideas from the use of  SDEs, with non-Gaussian as well as Gaussian noise, have been used for representing the `flow' of information from the input of a deep learning framework to the output. The assumption of noise-based forcing of dynamics imparts significant robustness to the quality of learning and the ability to generalize to unseen data. The study of complex stochastic dynamical systems with a focus on their interface with state-of-the-art deep learning architectures is essential for multiplying opportunities for applied mathematics undergraduate and graduate students in data-driven modeling and simulation. 
+Stochastic dynamical systems are also extremely relevant to several data science applications such as machine learning in the presence of significant noise. Recently, ordinary and stochastic differential equations, parameterized by neural networks, have been used for learning regression and classification tasks for noisy irregular datasets \cite{chen2018neural,rubanova2019latent,jia2019neural,tzen2019neural,look2020deterministic,liu2019neural}. Specifically, SDEs, with non-Gaussian as well as Gaussian noise, have been used to represent the `flow' of information from the input of a deep learning framework to the output. The assumption of noise-based forcing of dynamics imparts significant robustness to the quality of learning and the ability to generalize to unseen data. The study of complex stochastic dynamical systems with a focus on their interface with state-of-the-art deep learning architectures is essential for multiplying opportunities for applied mathematics undergraduate and graduate students in data-driven modeling and simulation. 
 
 % 1. Introduce with connections for stochastic dynamical systems and deep learning and add literature review. 
 % 2. Justify for RTG.
@@ -339,17 +342,17 @@ Stochastic dynamical systems are also extremely relevant to several data science
 %This parameter is of great importance since by using it into the classic SIS model, they found probability density function patterns generated by non-local dispersal:  $\alpha-$stable L\'evy motions are strikingly similar to practical data of human influenza. A further example is a thermally activated motion of a test particle along a polymer,   shown in \cite{sokolov1997paradoxal, brockmann2002levy} to be subject to $\frac{1}{2}$-stable L\'evy motion due to polymer's self-intersections.  This motivates the investigation of dynamical systems driven by both Gaussian and non-Gaussian   fluctuations, especially the heavy-tailed,  $\alpha-$stable   L\'evy motions.  
 
  
-\textbf{Quantifying transition phenomena.}
-To understand transition   in    a stochastic system, we  study the     'ensemble' (or `continua') quantities: mean exit time (exiting from a dynamical regime),   escape probability (from one dynamical regime to another),    and  the transition  probability density.
+\subsubsection*{Quantifying transition phenomena}
+To understand transition   in    a stochastic system, we  study the     `ensemble' (or `continua') quantities: mean exit time (exiting from a dynamical regime),   escape probability (from one dynamical regime to another), and  the transition  probability density. \FredNote{How will this help us better understand the applications mentioned above?}
 This leads to deterministic  nonlocal (integro-differential) equations for mean exit time and for escape probability, and a nonlocal Fokker-Planck equation,
 in which the usual Laplace operator is replaced
-by a nonlocal   Laplace operator (which is (related to) the generator of L\'evy motion $L_t^\alpha$):  $-(-\Delta)^{\frac{\alpha}2  }$, for $\alpha \in (0, 2)$.
+by a nonlocal Laplace operator (which is (related to) the generator of L\'evy motion $L_t^\alpha$):  $-(-\Delta)^{\frac{\alpha}2  }$, for $\alpha \in (0, 2)$.
  
 %Both mean exit time and escape probability are described by nonlocal `elliptic' partial differential equations, with unusual boundary conditions corresponding to absorbing or escaping situations at microscopic levels. The probability density function for the solution of an SDE with  with L\'evy noise is described by a nonlocal Fokker-Planck equation.
   
-As the usual numerical methods (such as finite difference) are non feasible, we develop a method to simulate these high dimensional nonlocal equations based on a stationary or temporal normalizing flow model which is a subset of generative machine learning models using deep learning. This method involves techniques to handle the nonlocal terms implicitly since arbitrary probability densities can be learned from samples alone. Subsequently, `ensemble' quantities, including the mean trajectories (when exist), are high dimensional integrals with respect to the probability density \cite{DuanBook2015}.  Thus we validate our fit distributions with Monte Carlo simulations, in particular highly stratified or quasi-Monte Carlo variants, where our team has made recent theoretical advances \cite{Hic17a, HicEtal17a} and efficient implementations \cite{QMCPy2020a}. 
+As the usual numerical methods (such as finite difference) are non feasible, we \FredNote{will ?} develop a method to simulate these high dimensional nonlocal equations based on a stationary or temporal normalizing flow model which is a subset of generative machine learning models using deep learning. \FredNote{Are we going to use generative machine learning models to study SDEs with L\'evy noise that model deep learning models?} This method involves techniques to handle the nonlocal terms implicitly since arbitrary probability densities can be learned from samples alone. Subsequently, `ensemble' quantities, including the mean trajectories (when exist), are high dimensional integrals with respect to the probability density \cite{DuanBook2015}.  Thus we will validate our fit distributions with Monte Carlo simulations, in particular highly stratified or quasi-Monte Carlo variants, where our team has made recent theoretical advances \cite{Hic17a, HicEtal17a} and efficient implementations \cite{QMCPy2020a}. 
 
-Furthermore, we investigate the most probable transition pathway between dynamically different regimes (e.g., metastable states) during finite transition time. This pathway is the minimizer of  
+Furthermore, we will investigate the most probable transition pathway between dynamically different regimes (e.g., metastable states) during finite transition time. This pathway is the minimizer of  
 of the associated Onsager-Machlup action functional 
 $$
 \mathcal{A}(z, \dot z) = \int_0^T \mathcal{L}(z(t), \dot z(t)) dt,
@@ -359,7 +362,7 @@ where the Lagrangian  $\mathcal{L}$ depends on the vector field $f$, noise inten
 %Machine learning for high dimensional stochastic dynamics using deterministic quantities or indexes which are defined as mean or high dimensional integrals.
 
  
-\textbf{Extracting transition phenomena from noisy data.}
+\subsubsection*{Extracting transition phenomena from noisy data}
 Some   stochastic systems may be only known or partially known (where some mechanisms are missing) by   noisy observations or simulated data sets. We will  develop techniques to extract stochastic governing laws \cite{YangLi2020a} and then examine transition phenomena by computing mean exit time, escape probability and transition probability density as above. 
 There are several potential interfaces with state-of-the-art generative machine learning here which has been constructing novel methods to learn probability densities from data as neural stochastic differential equations. Furthermore, our colleagues'  works on 
 designing and optimizing sensor networks, and graph theory \cite{karwa2016statistical,Calines2008MonitoringSF} will be explored to guide smart data collection for interface with such novel algorithms. 
@@ -369,18 +372,6 @@ designing and optimizing sensor networks, and graph theory \cite{karwa2016statis
 A class of high dimensional dynamic systems may be interpreted as networks, such as   gene regulation networks \cite{Raser2005} which are modeled by systems of stochastic differential equations \cite{Suel06}.  In a gene regulation network, a transition from low to high concentration of a promoter protein may indicate transcription \cite{Stefan,ZLDK}. Studying transitions in large networks is also of vital importance for resiliency analyses and control of powergrid infrastructure and for supply chain modeling in operations research which may be modeled as stochastic processes on graphs \cite{shin2020graph,anghel2007stochastic,nardelli2014models}. For large networks with multiple sources, sinks and connectivity measures of several variables, extremely high dimensional systems are commonly obtained. Furthermore, optimization of these graphs for desired quantities of interest require the solution of a complex mixed-integer nonlinear programming problem with constraints that may not be nominal input-output mappings but aforementioned complex dynamical systems \cite{shin2020decentralized,sampat2017optimization,kim2019graph,shin2021exponential}.
 
  
-\noindent \textbf{Regular group activities:} We will hold   the weekly Stochastic Dynamics Seminar. The key component     is for     students present articles relevant for the main topics of the
-project followed by a discussion of how the methods developed in our research could be applied to emerging
-areas of   research (e.g., gene networks, climate models, machine learning inspired by stochastic dynamics). This will enhance our students’ grasp of the important current research topics
-and potentially lead to new collaborations. We also propose that graduate students and postdoc regularly
-make short presentations on their research progress to all RTG participants, followed by a discussion of next steps in each individual research project.
-
-
- 
-
-\noindent \textbf{Yearly workshop:} A two-day workshop will be organized in the end of each academic year.  It will consist   of presentations by graduate
-students and postdocs, with several invited lectures 
-by top researchers. These researchers will be chosen from experts.   
 
 
 
@@ -453,10 +444,6 @@ Energetic variational formulation also provides guide line to develop numerical 
      \fi
      
 
-
-\noindent {\bf Regular group activities}: {We will continue the weekly Multiscale and Complex Fluids Seminar. One key activity is to have students present articles relevant for the main topics of the project and explore the potential applications. This could also foster new collaborations between the students and other researchers. We also propose that graduate students and postdoc regularly make short presentations on their research progress and discuss the possible new approaches.}
-
-\noindent {\bf Yearly workshop}:  A two-day workshop will be organized either in Illinois Tech. We will also pursue opportunities for collaboration with international centers such as Banff International Research Station and the NSF Institute for Mathematical and Statistical Innovation (IMSI).
 
 
 
@@ -531,7 +518,9 @@ The Chicago Council on Science and Technology (C2ST) are uploaded as supplementa
  
 
 
-\section{Course Innovation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Curriculum Innovation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 We will renovate three existing courses,  
 and offer two new courses and several minicourses.
 
@@ -741,6 +730,36 @@ We will have a Illinois Tech RTG YouTube channel,  broadcasting our     workshop
 
 % and minicourses on Data Science for Dynamical Systems, Advances in Multiscale Modeling, and Introduction to Quantum Dynamics offered by distinguished RTG visitors. 
  
+\subsection{Research Group Activities}
+The groups of faculty, postdocs, and students corresponding to the three research problems in Section \ref{sec:researchproblems} will meet regularly---weekly during the fall and spring semesters and more frequently during the summer.  These group meetings will build upon our existing Stochastic Dynamics Seminar for project 1, and Multiscale and Complex Fluids Seminar for project 2. A new Quantum Dynamics Seminar will be added for project 3.  Although not all postdocs and students involved in this RTG will attend all research groups, the times will be scheduled to not overlap.
+
+All trainees (students and postdocs) supported by this RTG will be assigned to one or two projects and join the corresponding seminar.  Trainees may enter or exit these research groups at different times of the year, e.g., some will participate during a summer only, while others will participate over the course of a couple of academic years. Thus, certain background lectures will need to be repeated periodically.  Initially these will be given by the PIs and our faculty and scientific collaborators, and the lectures will be recorded so that students and postdocs can refer to them.  However, part of our training will be to mentor our postdocs and experienced students to give these background lectures as well.  
+
+Trainees entering the research groups will be provided with a faculty mentor and a postdoc or experienced student mentor.  New trainees will be given an article to read related to the research problem and report on it to the seminar, describing what are the significant claims, pointing out drawbacks, and suggesting directions for extension. The articles may be in mathematical sciences or in an application area.
+
+As trainees become engaged in research, they will report on the progress at the regular seminar meetings, and report on significant progress at the .
+
+
+\noindent \textbf{Regular group activities:} We will hold   the weekly Stochastic Dynamics Seminar. The key component     is for     students present articles relevant for the main topics of the
+project followed by a discussion of how the methods developed in our research could be applied to emerging
+areas of   research (e.g., gene networks, climate models, machine learning inspired by stochastic dynamics). This will enhance our students’ grasp of the important current research topics
+and potentially lead to new collaborations. We also propose that graduate students and postdoc regularly
+make short presentations on their research progress to all RTG participants, followed by a discussion of next steps in each individual research project.
+
+
+ 
+
+\noindent \textbf{Yearly workshop:} A two-day workshop will be organized in the end of each academic year.  It will consist   of presentations by graduate
+students and postdocs, with several invited lectures 
+by top researchers. These researchers will be chosen from experts.   
+
+\noindent {\bf Regular group activities}: {We will continue the weekly Multiscale and Complex Fluids Seminar. One key activity is to have students present articles relevant for the main topics of the project and explore the potential applications. This could also foster new collaborations between the students and other researchers. We also propose that graduate students and postdoc regularly make short presentations on their research progress and discuss the possible new approaches.}
+
+\noindent {\bf Yearly workshop}:  A two-day workshop will be organized either in Illinois Tech. We will also pursue opportunities for collaboration with international centers such as Banff International Research Station and the NSF Institute for Mathematical and Statistical Innovation (IMSI).
+
+
+
+
 
 
 
@@ -791,6 +810,10 @@ We plan to co-organize this DEI workshop with Mathematics and Computer Science D
 \textbf{Public Lectures Co-sponsored by  C2ST:}  The Chicago Council on Science and Technology (C2ST) will co-sponsor   one or more public lectures on applications   of mathematics in modern science and technology.
 %A letter of collaboration from C2ST is uploaded as a supplementary document.  
 
+\noindent
+\textbf{Newsletters} 
+RTG trainees will edit a semi-annual electronic newsletter, 
+featuring our education, research  and outreach  activities. 
 
 \section{Recruitment and Retention Plan}
 
@@ -938,7 +961,7 @@ We have obtained results on  boundary regularity, interior regularity and maxima
 
  \medskip 
 
-\noindent\textbf{Chun Liu} is the PI on the NSF grants: DMS-1714401,  Topics in Complex Fluids and Biophysiology: the Energetic Variational Approaches, \$349,934, 7/1/2017 - 6/31/2021 and 
+\noindent\textbf{Liu} is the PI on the NSF grants: DMS-1714401,  Topics in Complex Fluids and Biophysiology: the Energetic Variational Approaches, \$349,934, 7/1/2017 - 6/31/2021 and 
 {NSF DMS-1950868, Collaborative Research: Multi-Scale Modeling and Numerical Methods for Charge Transport in Ion Channels, \$160,000.00, 8/15/2020 - 7/31/2023.}
 
 \noindent\textbf{Intellectual merit:}  
@@ -962,7 +985,7 @@ and related analytical studies \cite{WaLiTa17, hsieh2020global} with incorporati
 
 % [\color{red} I just noticed that some publication before 2017]}
 
-\noindent{\bf Broader impacts:}  PI Liu had worked with
+\noindent{\bf Broader impacts:}  Liu had worked with
 3 postdocs and 3 graduate students, along with several undergraduate students 
 on related projects of this proposal. 
 % The group also involves  s.
