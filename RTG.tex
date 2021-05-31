@@ -284,8 +284,10 @@ Our university has the following resources to support this RTG.
 We propose three research projects under the umbrella of complex dynamical systems: 1.\ dynamics under uncertainty; 2.\  energetic variational approaches for complex dynamics; and 3.\ mathematical tools for quantum dynamics. Project 1 connects with Project 2 via minimizing action functionals. In Project 3, we examine the interplay of quantum uncertainty and external fluctuations, and further consider a Bohmian trajectory formulation of quantum dynamics, thus linking with Project 1. 
 
 The team for each project will consist of researchers with at least one member
-from Argonne National Lab or departments outside applied mathematics,   together with math undergraduate and graduate students, and a postdoctoral
-fellow. Whenever possible, other undergraduate and graduate students and junior faculty members are welcome to   be part of the RTG activities. 
+from Argonne National Lab or departments outside applied mathematics, together with math undergraduate and graduate students, and a postdoctoral
+fellow. In addition to those trainees (postdocs and students) supported directly by this RTG, other students, postdocs, and faculty members will be encouraged to join these projects.  The key faculty and scientists are listed for each project below.
+
+\FredNote{I would take off the trainees in the teams, since their number look small.}
 
 \iffalse  
  While there   may be thematic driven differences on the approach to deliver
@@ -297,9 +299,9 @@ way on two topics, which we believe to be highly beneficial.
  
 
 \subsection*{Project 1. Dynamics  Under Uncertainty:} 
-Jinqiao Duan (leader), Fred Hickernell, Michael Pelsmajer, Romit Maulik, Mustafa Bilgic (Illinois Tech Computer Science) and Prasanna Balaprakash (Argonne National Lab), together with one or more undergraduate students, one or more PhD students, and a postdoctoral fellow.  
+Jinqiao Duan (leader), Fred Hickernell, Michael Pelsmajer, Romit Maulik, Mustafa Bilgic (Illinois Tech Computer Science) and Prasanna Balaprakash (Argonne National Lab). 
 
-\subsubsection*{Objective} \FredNote{This subsubsection seems more like background.  I do not see an objective.}The interactions of uncertainty and nonlinearity lead to intriguing phenomena, such as  transitions   between  different dynamical regimes. We develop modeling, analytical, computational and data science  methods to quantify     stochastic dynamics, with applications to chemical \cite{agaoglou_chemical_2019}, biophysical \cite{Ruoff2018BiologicalCR}, powergrid infrastructures \cite{MEDJROUBI201714}, and climate systems \cite{Alexandrov2020NonlinearCD, Franzke2017NonlinearAS, Wan2020ADF}. 
+\subsubsection*{Background} \FredNote{I relabaled this subsubsection as background.  I do not see an objective.} The interactions of uncertainty and nonlinearity lead to intriguing phenomena, such as  transitions   between  different dynamical regimes. We develop modeling, analytical, computational and data science  methods to quantify     stochastic dynamics, with applications to chemical \cite{agaoglou_chemical_2019}, biophysical \cite{Ruoff2018BiologicalCR}, powergrid infrastructures \cite{MEDJROUBI201714}, and climate systems \cite{Alexandrov2020NonlinearCD, Franzke2017NonlinearAS, Wan2020ADF}. 
  
 Complex systems are oftentimes under the influence  of randomness or uncertainty \cite{Moss1, Horst, Gar, VanKampen3}. Uncertainties may also be caused by our lack of knowledge of some physical processes that are not well represented in the mathematical models (epistemic) and due to the inherent randomness of a specific event  \cite{Palmer1, Kantz, Wilks, Williams}.
 Although these random mechanisms appear to be very small or very fast, their long time impact on the system evolution may be delicate or even profound \cite{Arnold, DuanBook2015}. These delicate impacts on the overall evolution of dynamical systems has been observed in, for example, stochastic bifurcation
@@ -349,7 +351,7 @@ by a nonlocal Laplace operator (which is (related to) the generator of L\'evy mo
  
 %Both mean exit time and escape probability are described by nonlocal `elliptic' partial differential equations, with unusual boundary conditions corresponding to absorbing or escaping situations at microscopic levels. The probability density function for the solution of an SDE with  with L\'evy noise is described by a nonlocal Fokker-Planck equation.
   
-As the usual numerical methods (such as finite difference) are non feasible, we \FredNote{will ?} develop a method to simulate these high dimensional nonlocal equations based on a stationary or temporal normalizing flow model which is a subset of generative machine learning models using deep learning. \FredNote{Are we going to use generative machine learning models to study SDEs with L\'evy noise that model deep learning models?} This method involves techniques to handle the nonlocal terms implicitly since arbitrary probability densities can be learned from samples alone. Subsequently, `ensemble' quantities, including the mean trajectories (when exist), are high dimensional integrals with respect to the probability density \cite{DuanBook2015}.  Thus we will validate our fit distributions with Monte Carlo simulations, in particular highly stratified or quasi-Monte Carlo variants, where our team has made recent theoretical advances \cite{Hic17a, HicEtal17a} and efficient implementations \cite{QMCPy2020a}. 
+As the usual numerical methods (such as finite difference) are non feasible, we will develop a method to simulate these high dimensional nonlocal equations based on a stationary or temporal normalizing flow model which is a subset of generative machine learning models using deep learning. \FredNote{Are we going to use generative machine learning models to study SDEs with L\'evy noise that model deep learning models?} This method involves techniques to handle the nonlocal terms implicitly since arbitrary probability densities can be learned from samples alone. Subsequently, `ensemble' quantities, including the mean trajectories (when exist), are high dimensional integrals with respect to the probability density \cite{DuanBook2015}.  Thus we will validate our fit distributions with Monte Carlo simulations, in particular highly stratified or quasi-Monte Carlo variants, where our team has made recent theoretical advances \cite{Hic17a, HicEtal17a} and efficient implementations \cite{QMCPy2020a}. 
 
 Furthermore, we will investigate the most probable transition pathway between dynamically different regimes (e.g., metastable states) during finite transition time. This pathway is the minimizer of  
 of the associated Onsager-Machlup action functional 
@@ -506,68 +508,18 @@ by top researchers.
 \fi
 
 
-\section{Partnership with NSF Math Institute IMSI \& Argonne National Lab}
-
-The letters of Collaboration from NSF Math Institute for Mathematical and Statistical Innovation (IMSI), Argonne National Lab (ANL), and 
-The Chicago Council on Science and Technology (C2ST) are uploaded as supplementary documents.  We will :\\
-\bfparagraph{Organize a workshop on Mathematical Tools for Quantum Dynamics   at IMSI};   
-\bfparagraph{Collaborate with Argonne National Lab} on machine learning methods for stochastic dynamics, and quantum mechanics in the context of applied mathematics, with resources for summer interns to our trainees;  
-\bfparagraph{Collaborate with C2ST} on scientific and technical communication training, and sponsoring public lectures explaining how modern topics in applied mathematics and statistics help us better understand our world.
- 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Curriculum Innovation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-We will renovate three existing courses,  
-and offer two new courses and several minicourses.
-
-\bfparagraph{MATH 350 Computational Mathematics} 
-
-\bfparagraph{MATH 488 Ordinary Differential Equations and Dynamical Systems} PI Duan has taught this undergraduate course for multiple  times in the past 20 years and feels  a strong need  to integrate recent advances, e.g., computational and data science techniques for high dimensional dynamics. 
-
-\bfparagraph{MATH 544 Stochastic Dynamics.}
-We will renovate this graduate course  incorporating topics on  high dimensional stochastic systems via data-driven algorithms.  The course will fill a gap by addressing simulation methods for nonlocal equations in high dimensional domain and validate with a Monte Carlo  method and thus better prepare the students for future careers in both industry and academia.
- 
-
-\bfparagraph{New Course: Introduction to Mathematical Theories of Complex Fluids} 
-Complex fluids is ubiquitous in our daily life and important in many industrial, physical and biological applications. Studying these materials requires a wide range 
-of tools and techniques for different disciplinary, even within mathematics. A new upper undergraduate/graduate course will be developed on mathematical theories of complex fluids. The course will be self contained and covers basic mechanics, non-equilibrium thermodynamics, multi-scale modeling and analysis with applications in engineering and biology. The course will fill the gaps between traditional mathematical courses and engineering courses.
-
-
-%\smallskip
-%\noindent
-%{\bf Linear Algebra from the Quantum Point of View.} It cannot be emphasized enough that Linear Algebra (Linear Space Theory in general) is fundamental to many areas of pure, applied, and computational mathematics, and it is also fundamental to the structure of quantum mechanics. Of course, ‘’every’’ mathematics department has courses in Linear Algebra. However, topics important to quantum mechanics are often omitted.  Our course will fill that gap. The starting  point will be to emphasize that the basic structure of quantum mechanics is complex in nature—the solution of Schr\"{o}dinger’s equation is complex valued and linear spaces are complex vector spaces. The language that we will use is Dirac notation.  This complex structure has implications for the nature of inner products, and this plays a key role in the mathematical structure of quantum mechanics.  Multi-particle quantum systems are essential for the notion of entanglement. In classical mechanics multi-particle systems are described by the cartesian product of state spaces for each particle. In quantum mechanics they are described by a tensor product, and this algebraic structure tends not to be treated in traditional linear algebra courses, but it is essential for describing the basic elements, and showing the advantages of, quantum computation, and this mathematical structure will be emphasized in our course.  The Schmidt decomposition provides an insightful characterization of entanglement based on tensor product spaces and its proof relies on the singular value decomposition, another topic of great importance (also in data science) that is typically neglected in a first linear algebra course, but it will be emphasized in our course.
- 
-\bfparagraph{New Course: Introduction to Mathematical Framework for Quantum Mechanics} This will be a course that is suitable for mathematics graduate students. We will build this course from  a   undergraduate course   taught by team member Carlo Segre, and another one taught by our Research Professor Stephen Wiggins (available on YouTube). PI Duan   taught a minicourse in Quantum Dynamics \cite{Gutzwiller1990ChaosIC, Holland1993TheQT,Lindgren2019QuantumMC,Micha2006QuantumDW} in 2019 and 2020 for graduate students and his collaborators.  We will invite our collaborators to co-teach this course. 
-%The course is now available on YouTube \cite{https://www.youtube.com/playlist?list=PL6hB9Fh0Z1ELQy4WdFzlMcMD_XIb7C3no}, and has its own open source textbook and solutions manual available from FigShare. 
-The YouTube format provides the opportunity to engage the students in an active learning format where they view the “short" lectures ahead of time and the in person class time  also includes  questions, discussions, and problem solving. Stephen Wiggins will co-teach this course with us and his letter of collaboration is a supplementary document.
-
-
-%\medskip
-%\noindent
-%{\bf The Phase Space Framework for Chemical Reaction Dynamics.} An extremely active and constantly evolving area that spans many disciplines of science of the study of the ‘’dynamics of transformation’’, of which chemical reaction dynamics theory is a central example. In recent years it has been shown that the phase space perspective of Hamiltonian dynamics can provide not only valuable insights but also predictive power. Moreover, this phase space approach provides a framework for understanding when quantum effects are important through the phase space formulation of quantum mechanics due Wigner, Weyl, Moyal, Groenewold, and others \cite{ waalkens2007wigner}. Material for this course is covered in our Jupyter book  \cite{agaoglou_chemical_2019}, which is freely available.   \cite{Beard2008ChemicalBQ}
-
-
-
-\bfparagraph{Minicourses} 
-Our collaborators, at Argonne National Lab and other institutions, and some visitors will offer minicourses (about 10 lecture hours each) to supplement regular courses and to expose trainees to the frontiers of our research projects. Possible minicourses include  Machine Learning on Encrypted Data,  Non-equilibrium Statistical Mechanics,  Stochastic Hamiltonian Dynamics, Bohmian Quantum Dynamics, High Dimensional Numerical Analysis, and Foundation of Machine Learning, among others.
-
 
 \section{Research Training }
 
 \subsection{RTG undergraduate training }
 
 \phantom{a}
-\FredNote{Student SIAM conference
-
-CAURS
-
+\FredNote{
 URJIIT
 
 SIAM UJ}
  
-We offer a major in  Applied Mathematics with the possibility of a variety of specializations as well as options for double majors and co-terminal joint BS-MS degree. Starting from the fall of 2018, we have also offered a major in statistics. The undergraduate majors have numbered between 45 to 65 over the past five years. With this RTG, we goal is to increase this number and to get better prepared and diverse incoming students, establishing pathways of engagement between the department and the high schools around Chicago area through a variety of consistent outreach activities.
+Our Department of Applied Mathematics offers a BS in applied mathematics a variety of specializations as well as options for double majors and co-terminal joint BS-MS degrees. We also offer a BS in statistics.  Our goals in this RTG is to increase the number of undergraduate majors from our current number of 65 \FredNote{Is this number correct?  We give it in the first section}. We also plan to increase the diversity  increase this number and to get better prepared and diverse incoming students, establishing pathways of engagement between the department and the high schools around Chicago area through a variety of consistent outreach activities.
 
 
 
@@ -764,6 +716,55 @@ In particular, Dr. Michael McCourt at SigOpt, a part of Intel, will share  his e
 
 \bfparagraph{Learn how to write proposals}
 A yearly colloquium presentation  will be offered in September by one of the PI/Co-PIs or experts on   writing research proposals. 
+
+
+\section{Partnership with NSF Math Institute IMSI \& Argonne National Lab}
+
+The letters of Collaboration from NSF Math Institute for Mathematical and Statistical Innovation (IMSI), Argonne National Lab (ANL), and 
+The Chicago Council on Science and Technology (C2ST) are uploaded as supplementary documents.  We will :\\
+\bfparagraph{Organize a workshop on Mathematical Tools for Quantum Dynamics   at IMSI};   
+\bfparagraph{Collaborate with Argonne National Lab} on machine learning methods for stochastic dynamics, and quantum mechanics in the context of applied mathematics, with resources for summer interns to our trainees;  
+\bfparagraph{Collaborate with C2ST} on scientific and technical communication training, and sponsoring public lectures explaining how modern topics in applied mathematics and statistics help us better understand our world.
+ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Curriculum Innovation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We will renovate three existing courses,  
+and offer two new courses and several minicourses.
+
+\bfparagraph{MATH 350 Computational Mathematics} 
+
+\bfparagraph{MATH 488 Ordinary Differential Equations and Dynamical Systems} PI Duan has taught this undergraduate course for multiple  times in the past 20 years and feels  a strong need  to integrate recent advances, e.g., computational and data science techniques for high dimensional dynamics. 
+
+\bfparagraph{MATH 544 Stochastic Dynamics.}
+We will renovate this graduate course  incorporating topics on  high dimensional stochastic systems via data-driven algorithms.  The course will fill a gap by addressing simulation methods for nonlocal equations in high dimensional domain and validate with a Monte Carlo  method and thus better prepare the students for future careers in both industry and academia.
+ 
+
+\bfparagraph{New Course: Introduction to Mathematical Theories of Complex Fluids} 
+Complex fluids is ubiquitous in our daily life and important in many industrial, physical and biological applications. Studying these materials requires a wide range 
+of tools and techniques for different disciplinary, even within mathematics. A new upper undergraduate/graduate course will be developed on mathematical theories of complex fluids. The course will be self contained and covers basic mechanics, non-equilibrium thermodynamics, multi-scale modeling and analysis with applications in engineering and biology. The course will fill the gaps between traditional mathematical courses and engineering courses.
+
+
+%\smallskip
+%\noindent
+%{\bf Linear Algebra from the Quantum Point of View.} It cannot be emphasized enough that Linear Algebra (Linear Space Theory in general) is fundamental to many areas of pure, applied, and computational mathematics, and it is also fundamental to the structure of quantum mechanics. Of course, ‘’every’’ mathematics department has courses in Linear Algebra. However, topics important to quantum mechanics are often omitted.  Our course will fill that gap. The starting  point will be to emphasize that the basic structure of quantum mechanics is complex in nature—the solution of Schr\"{o}dinger’s equation is complex valued and linear spaces are complex vector spaces. The language that we will use is Dirac notation.  This complex structure has implications for the nature of inner products, and this plays a key role in the mathematical structure of quantum mechanics.  Multi-particle quantum systems are essential for the notion of entanglement. In classical mechanics multi-particle systems are described by the cartesian product of state spaces for each particle. In quantum mechanics they are described by a tensor product, and this algebraic structure tends not to be treated in traditional linear algebra courses, but it is essential for describing the basic elements, and showing the advantages of, quantum computation, and this mathematical structure will be emphasized in our course.  The Schmidt decomposition provides an insightful characterization of entanglement based on tensor product spaces and its proof relies on the singular value decomposition, another topic of great importance (also in data science) that is typically neglected in a first linear algebra course, but it will be emphasized in our course.
+ 
+\bfparagraph{New Course: Introduction to Mathematical Framework for Quantum Mechanics} This will be a course that is suitable for mathematics graduate students. We will build this course from  a   undergraduate course   taught by team member Carlo Segre, and another one taught by our Research Professor Stephen Wiggins (available on YouTube). PI Duan   taught a minicourse in Quantum Dynamics \cite{Gutzwiller1990ChaosIC, Holland1993TheQT,Lindgren2019QuantumMC,Micha2006QuantumDW} in 2019 and 2020 for graduate students and his collaborators.  We will invite our collaborators to co-teach this course. 
+%The course is now available on YouTube \cite{https://www.youtube.com/playlist?list=PL6hB9Fh0Z1ELQy4WdFzlMcMD_XIb7C3no}, and has its own open source textbook and solutions manual available from FigShare. 
+The YouTube format provides the opportunity to engage the students in an active learning format where they view the “short" lectures ahead of time and the in person class time  also includes  questions, discussions, and problem solving. Stephen Wiggins will co-teach this course with us and his letter of collaboration is a supplementary document.
+
+
+%\medskip
+%\noindent
+%{\bf The Phase Space Framework for Chemical Reaction Dynamics.} An extremely active and constantly evolving area that spans many disciplines of science of the study of the ‘’dynamics of transformation’’, of which chemical reaction dynamics theory is a central example. In recent years it has been shown that the phase space perspective of Hamiltonian dynamics can provide not only valuable insights but also predictive power. Moreover, this phase space approach provides a framework for understanding when quantum effects are important through the phase space formulation of quantum mechanics due Wigner, Weyl, Moyal, Groenewold, and others \cite{ waalkens2007wigner}. Material for this course is covered in our Jupyter book  \cite{agaoglou_chemical_2019}, which is freely available.   \cite{Beard2008ChemicalBQ}
+
+
+
+\bfparagraph{Minicourses} 
+Our collaborators, at Argonne National Lab and other institutions, and some visitors will offer minicourses (about 10 lecture hours each) to supplement regular courses and to expose trainees to the frontiers of our research projects. Possible minicourses include  Machine Learning on Encrypted Data,  Non-equilibrium Statistical Mechanics,  Stochastic Hamiltonian Dynamics, Bohmian Quantum Dynamics, High Dimensional Numerical Analysis, and Foundation of Machine Learning, among others.
+
 
 
 \section{Outreach}
