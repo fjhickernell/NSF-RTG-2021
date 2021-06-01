@@ -36,7 +36,11 @@
 \usepackage{psfrag,epsfig,amsfonts,amsmath,latexsym,amsthm,amssymb,amscd,url }
 \usepackage{amsmath}
 \usepackage{bm}
+\usepackage{enumitem}
  
+\setlist[description]{font=\normalfont\bfseries, labelindent = 0cm, leftmargin=0ex}
+\setlist[itemize]{leftmargin=5ex}
+
 
 \newcommand{\F}{{\mathcal{F}}}
 \newcommand{\B}{{\mathcal{B}}}
@@ -227,8 +231,6 @@ The team for each project will consist of researchers with at least one member
 from Argonne National Lab or departments outside applied mathematics, together with math undergraduate and graduate students, and a postdoctoral
 fellow. In addition to those trainees (postdocs and students) supported directly by this RTG, other students, postdocs, and faculty members will be encouraged to join these projects.  The key faculty and scientists are listed for each project below.
 
-\FredNote{I would take off the trainees in the listing of teams, since their number look small.}
-
 \iffalse  
  While there   may be thematic driven differences on the approach to deliver
 knowledge and do research, each group share a similar year-round schedule that will allow awareness
@@ -243,7 +245,7 @@ way on two topics, which we believe to be highly beneficial.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Jinqiao Duan (leader), Fred Hickernell, Michael Pelsmajer, Romit Maulik, Mustafa Bilgic (Illinois Tech Computer Science) and Prasanna Balaprakash (Argonne National Lab). 
 
-\subsubsection*{Background} \phantom{} \FredNote{I relabeled this subsubsection as background.  I do not see an objective.} The interactions of uncertainty and nonlinearity lead to intriguing phenomena, such as  transitions   between  different dynamical regimes. We develop modeling, analytical, computational and data science  methods to quantify     stochastic dynamics, with applications to chemical \cite{agaoglou_chemical_2019}, biophysical \cite{Ruoff2018BiologicalCR}, powergrid infrastructures \cite{MEDJROUBI201714}, and climate systems \cite{Alexandrov2020NonlinearCD, Franzke2017NonlinearAS, Wan2020ADF}. 
+\subsubsection*{Background} The interactions of uncertainty and nonlinearity lead to intriguing phenomena, such as  transitions   between  different dynamical regimes. We develop modeling, analytical, computational and data science  methods to quantify     stochastic dynamics, with applications to chemical \cite{agaoglou_chemical_2019}, biophysical \cite{Ruoff2018BiologicalCR}, powergrid infrastructures \cite{MEDJROUBI201714}, and climate systems \cite{Alexandrov2020NonlinearCD, Franzke2017NonlinearAS, Wan2020ADF}. 
  
 Complex systems are oftentimes under the influence  of randomness or uncertainty \cite{Moss1, Horst, Gar, VanKampen3}. Uncertainties may also be caused by our lack of knowledge of some physical processes that are not well represented in the mathematical models (epistemic) and due to the inherent randomness of a specific event  \cite{Palmer1, Kantz, Wilks, Williams}.
 Although these random mechanisms appear to be very small or very fast, their long time impact on the system evolution may be delicate or even profound \cite{Arnold, DuanBook2015}. These delicate impacts on the overall evolution of dynamical systems has been observed in, for example, stochastic bifurcation
@@ -273,14 +275,10 @@ in which the usual Laplace operator is replaced
 by a nonlocal Laplace operator (which is (related to) the generator of L\'evy motion $L_t^\alpha$):  $-(-\Delta)^{\frac{\alpha}2  }$, for $\alpha \in (0, 2)$.
  
  
-As the usual numerical methods (such as finite difference) are non feasible, we will develop a method to simulate these high dimensional nonlocal equations based on a stationary or temporal normalizing flow model which is a subset of generative machine learning models using deep learning. \FredNote{Are we going to use generative machine learning models to study SDEs with L\'evy noise that model deep learning models?} This method involves techniques to handle the nonlocal terms implicitly since arbitrary probability densities can be learned from samples alone. Subsequently, `ensemble' quantities, including the mean trajectories (when exist), are high dimensional integrals with respect to the probability density \cite{DuanBook2015}.  Thus we will validate our fit distributions with Monte Carlo simulations, in particular highly stratified or quasi-Monte Carlo variants, where our team has made recent theoretical advances \cite{Hic17a, HicEtal17a} and efficient implementations \cite{QMCPy2020a}. 
+As the usual numerical methods (such as finite difference) are not feasible, we will develop a method to simulate these high dimensional nonlocal equations based on a stationary or temporal normalizing flow model which is a subset of generative machine learning models using deep learning. \FredNote{Are we going to use generative machine learning models to study SDEs with L\'evy noise that model deep learning models?} This method involves techniques to handle the nonlocal terms implicitly since arbitrary probability densities can be learned from samples alone. Subsequently, `ensemble' quantities, including the mean trajectories (when exist), are high dimensional integrals with respect to the probability density \cite{DuanBook2015}.  Thus we will validate our fit distributions with Monte Carlo simulations, in particular highly stratified or quasi-Monte Carlo variants, where our team has made recent theoretical advances \cite{Hic17a, HicEtal17a} and efficient implementations \cite{QMCPy2020a}. 
 
 Furthermore, we will investigate the most probable transition pathway between dynamically different regimes (e.g., metastable states) during finite transition time. This pathway is the minimizer of  
-of the associated Onsager-Machlup action functional 
-$$
-\mathcal{A}(z, \dot z) = \int_0^T \mathcal{L}(z(t), \dot z(t)) dt,
-$$
-where the Lagrangian  $\mathcal{L}$ depends on the vector field $f$, noise intensities $g, \sigma$, and  jump measure $\nu$ for L\'evy motion; for background, see   our recent works \cite{ChaoDuanOM,HuangYF}. The   transition time $T$ may also be estimated \cite{HuangYF2020}. We will explore how the energetic variational approaches in Project 2 may benefit us in the minimization of the Onsager-Machlup action functional here. 
+of the associated Onsager-Machlup action functional, $\mathcal{A}(z, \dot z) = \int_0^T \mathcal{L}(z(t), \dot z(t)) dt,$ where the Lagrangian  $\mathcal{L}$ depends on the vector field $f$, noise intensities $g, \sigma$, and  jump measure $\nu$ for L\'evy motion; for background, see   our recent works \cite{ChaoDuanOM,HuangYF}. The   transition time $T$ may also be estimated \cite{HuangYF2020}. We will explore how the energetic variational approaches in Project 2 may benefit us in the minimization of the Onsager-Machlup action functional here. 
 
 
  
@@ -305,11 +303,7 @@ The variational principle has been employed to study many complex fluids, such a
 In an isothermal closed system, an energy-dissipation law, coming from the first and second law of thermodynamics, is often given by $\frac{\dd}{\dd t} E^{\rm total} = - \triangle$,
 where $E^{\rm total}$ is the total energy, including both the kinetic energy $\mathcal{K}$ and the Helmholtz free energy $\mathcal{F}$, and $\triangle \geq 0$ is the rate of the energy dissipation which is equal to the entropy production in the situation. The energy-dissipation law, along with the kinematics relation, %describe all the physics and the assumptions for a given non-equilibrium system. 
 capture all specific physical and biological properties for a given non-equilibrium system. Starting with an energy-dissipation law, the EnVarA framework derives the dynamics of the systems through two variational principles, the Least Action Principle (LAP) and the Maximum Dissipation Principle (MDP). The LAP, which states the equation of motion for a Hamiltonian system
-can be derived from the variation of the action functional $\mathcal{A} = \int_{0}^T [\mathcal{K} - \mathcal{F}] \dd t$ with respect to the flow maps, gives a unique procedure to derive the conservative force for the system. The LAP is indeed a manifestation of the rule $\delta E = {\rm force} \cdot \delta x$. The MDP, variation of the dissipation potential $\mathcal{D}$, which equals to $\frac{1}{2}\triangle$ in the linear response regime, with respect to the rate (such as velocity), gives the dissipation force for the system. In turn, the force balance condition leads to the evolution equation to the system
-\begin{equation*}
-\frac{\delta \mathcal{D}}{\delta \x_t} = \frac{\delta \mathcal{A}}{\delta \x}.
-\end{equation*}
-Through different choices of the free energy $\mathcal{F}$ and the dissipation $\triangle$,
+can be derived from the variation of the action functional $\mathcal{A} = \int_{0}^T [\mathcal{K} - \mathcal{F}] \dd t$ with respect to the flow maps, gives a unique procedure to derive the conservative force for the system. The LAP is indeed a manifestation of the rule $\delta E = {\rm force} \cdot \delta x$. The MDP, variation of the dissipation potential $\mathcal{D}$, which equals to $\frac{1}{2}\triangle$ in the linear response regime, with respect to the rate (such as velocity), gives the dissipation force for the system. In turn, the force balance condition leads to the evolution equation to the system, $\frac{\delta \mathcal{D}}{\delta \x_t} = \frac{\delta \mathcal{A}}{\delta \x}.$ Through different choices of the free energy $\mathcal{F}$ and the dissipation $\triangle$,
 the EnVarA %can 
 systematically deals with the coupling and competition of mechanical, chemical and thermal mechanisms in different time scales in a thermodynamically consistent framework. It 
 provides an unified framework to study various
@@ -317,7 +311,9 @@ dynamical systems demonstrated in the other projects, and
 moreover, gives a way to quantify energy transduction between different processes.  
 
 \subsubsection*{Applications in Biology and Engineering}
-The team has the track record and relevant expertise to lead the projects. We plan to focus on projects related to the modeling of active soft materials in biological environments. \FredNote{What new insight do we hope to gain?}
+The team has the track record and relevant expertise to lead the projects. We plan to focus on projects related to the modeling of active soft materials in biological environments. 
+The unified framework will provide the insights for the systematical
+study of coupling and competition of these multiscale and multiphysics systems.
 The interdisciplinary nature of the team will provide an opportunity to have balanced training in different approaches of applied math, most notably multiscale modeling and analysis associated with the applications in biology and soft matter physics.
 
 \subsubsection*{Physics Preserving Numerical Simulations}
@@ -335,7 +331,7 @@ Jinqiao Duan (leader), Fred Hickernell, Romit Maulik (Illinois Tech and Argonne 
 Therefore it is essential in education nowadays that students develop a level of ``quantum literacy’’ \cite{foti2021quantum} that will enable them to interpret and evaluate these new phenomena and technologies in a way that will enable them to assess their impact, not only on their own  lives, but on society and the world. Developing this quantum literacy in the context of mathematical education,    at both the undergraduate and graduate   levels,  is a goal of this RTG project.
 
 
-Quantum mechanics is not typically emphasized in most mathematics programs.  Indeed, many of the unusual properties of quantum mechanics, such as tunneling, entanglement, superposition of multiple states, interference of states, uncertainty, and quantum measurement can be understood from the fundamental physical principle of ``wave-particle’’ duality and de Broglie’s relation between the momentum and the wavelength of a particle.  From this one is led to the Schr\"{o}dinger equation description of particles in terms of waves. In fact, the physical setting of quantum mechanics is described by a few (mathematical) axioms that describe the state space, observable quantities, measurement, and time evolution.  Once this physical setting is translated into mathematics, the implications and consequences of the mathematics is a natural setting for the participation of mathematicians. However, the required mathematical skills and knowledge are not typically emphasized or even covered in the relevant courses. A goal of this RTG is to remedy this situation, both through training undergraduate, graduate, and postdoctoral students, and through the development of a course appropriate for mathematicians, but which bridges this gap. This course will lead naturally into a variety of research areas that fit naturally into the context of the other research projects \FredNote{Do we mean our main three projects, or these research topics below?}, that we will describe.
+Quantum mechanics is not typically emphasized in most mathematics programs.  Indeed, many of the unusual properties of quantum mechanics, such as tunneling, entanglement, superposition of multiple states, interference of states, uncertainty, and quantum measurement can be understood from the fundamental physical principle of ``wave-particle’’ duality and de Broglie’s relation between the momentum and the wavelength of a particle.  From this one is led to the Schr\"{o}dinger equation description of particles in terms of waves. In fact, the physical setting of quantum mechanics is described by a few (mathematical) axioms that describe the state space, observable quantities, measurement, and time evolution.  Once this physical setting is translated into mathematics, the implications and consequences of the mathematics is a natural setting for the participation of mathematicians. However, the required mathematical skills and knowledge are not typically emphasized or even covered in the relevant courses. A goal of this RTG is to remedy this situation, both through training undergraduate, graduate, and postdoctoral students, and through the development of a course appropriate for mathematicians, but which bridges this gap. This course will lead naturally into a variety of research areas that fit naturally into the context of the other research topics, that we will describe.
 
 \subsubsection*{Exploring the Interplay Between Quantum Mechanical Uncertainty and Noise.} Uncertainty relations between quantum mechanical observables (such as position and momentum) arise naturally as a result of the mathematical formulation of quantum mechanics, in the absence of noise \cite{Griffiths2018IntroductionTQ}. This project will explore the interplay between quantum mechanical uncertainty and the influence of external noise \cite{Lindgren2019QuantumMC, Nagasawa2000StochasticPI} on the quantum mechanical system. In particular, we will examine how certain quantum dynamical behaviors  may be understood through stochastic minimization \cite{Lindgren2019QuantumMC} and affected by quantum noise \cite{Nurdin2019QuantumSP}. This may   benefit from our recent work on effective quantum wave factorization \cite{ZHANG2020132573}. This also relates to   Project 1 - Dynamics under Uncertainty.
 
@@ -457,7 +453,7 @@ mentor, who will observe a few classes and write a report. The summer of Year 4 
 In total, PhD student trainees will have at least two semesters of either supervised teaching or research-related internship or both.  Internships may be at at Argonne or other government labs and or at data science companies, such as SigOpt (now a part of Intel) whose Head of Engineering, our alum Michael McCourt, has provided a letter  of collaboration.
 
 \subsection*{Postdoctoral Fellows}
-Postdoctoral fellows must become independent researchers with a well-defined research program who can identify interesting, accessible research problems, write research proposals and publications, and teach others.  To hone their teaching skills, postdocs will teach one course per year.  \FredNote{Is this the correct frequency?}  They will help lead the summer programs and research group meetings, prepare and give tutorials on background material, assist in giving minicourses, and help organize workshops.  In these activities they will be mentored by faculty.
+Postdoctoral fellows must become independent researchers with a well-defined research program who can identify interesting, accessible research problems, write research proposals and publications, and teach others.  To hone their teaching skills, postdocs will teach one course per semester. They will help lead the summer programs and research group meetings, prepare and give tutorials on background material, assist in giving minicourses, and help organize workshops.  In these activities they will be mentored by faculty.
 
 \subsection*{Minicourses}
 Our collaborators, at Argonne and other institutions, and some visitors will offer minicourses (about 10 lecture hours each) to supplement regular courses and to expose trainees to the frontiers of our research projects. Possible minicourses include  Machine Learning on Encrypted Data,  Non-equilibrium Statistical Mechanics,  Stochastic Hamiltonian Dynamics, Bohmian Quantum Dynamics, High Dimensional Numerical Analysis, and Foundation of Machine Learning, among others. \FredNote{When will they be offered and over what time span?}
@@ -473,32 +469,30 @@ The RTG will provide travel support to RTG students and postdoctoral fellows to 
 In every October, one or two colloquium sessions will cover applying for REUs, graduate schools, and jobs in academia and industry. These sessions will draw upon the experience of our faculty, experienced trainees, and alumni, such as Dr.\ Michael McCourt of SigOpt, an Intel company focusing on Bayesian optimization.  A yearly colloquium presentation  will be offered in September by one of the PI/Co-PIs or experts on writing research proposals. Faculty and postdoc mentors will comment on draft r\'esum\'es,  applications, and proposals.  
 
 
-\FredNote{Do we still want this?  We have a lot going on.} Led by RTG postdocs and graduate students, we will organize RTG  weekly   Colloquia ``Frontiers in Applied Mathematics",  aimed at fostering collaboration between all RTG teams and exposing new research advances to trainees and other members of our department and beyond.   
-Once a year, the RTG  will organize a Colloquium  under the umbrella of the Illinois Tech SIAM Student Chapter.  
+%\FredNote{Do we still want this?  We have a lot going on.} Led by RTG postdocs and graduate students, we will organize RTG  weekly   Colloquia ``Frontiers in Applied Mathematics",  aimed at fostering collaboration between all RTG teams and exposing new research advances to trainees and other members of our department and beyond.   Once a year, the RTG  will organize a Colloquium  under the umbrella of the Illinois Tech SIAM Student Chapter.  
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Summer Programs} \label{sec:summer}
+\section{Summer Program} \label{sec:summer}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Summer is a great time for intense research effort when faculty and students alike take a break from formal coursework.  Postdoctoral fellows will help RTG faculty to lead our  summer programs.
 
-\subsection*{Undergraduate summer program.}
+%\subsection*{Undergraduate summer program.}
 We will run an in-house ten-week undergraduate summer research experience.  The program will be targeted at rising third and fourth year BS students.  The topics chosen each year will come from one or two of the research projects in Section \label{sec:researchproblems}.  We will support eight students each year, with around two-thirds being from Illinois Tech and the remaining being from other institutions.  When recruiting students from other institutions, preference will be given to women and underrepresented minorities.  RTG funds
 will pay a stipend and room and board to participating students.  This will allow students to engage with one another and their mentors outside of research time.  
 
-The ten-week program will begin with tutorials given by postdoctoral fellows and experienced students introducing a few possible research topics.  Participants will do some background reading and choose their topic, either solo, or in a small group, within the first week or two.  Regular meetings will allow participants to present their progress, get feedback from the larger group, and hone their message for an end of program presentation. In case of a COVID-19 type event, the summer program will be held online.
+The ten-week program will begin with tutorials given by postdoctoral fellows and experienced students introducing a few possible research topics.  Participants will do some background reading and choose their topic, either solo, or in a small group, within the first week or two.  Regular meetings will allow participants to present their progress, get feedback from the larger group, and hone their message for an end of program presentation. The program will be hosted at both Illinois Tech and Argonne.  In case of a COVID-19 type event, the summer program will be held online.
 
-A faculty member will oversee each summer with a postdoctoral fellow and one or two PhD students helping mentor the students.  There will be a synergy between our summer program and the related research groups, which will continue to meet during the summer, although perhaps less regularly
+A faculty member will oversee each summer with a postdoctoral fellow and one or two PhD students helping mentor the students.  There will be a synergy between our summer program and the related research groups, which will continue to meet during the summer, although perhaps less regularly.
 
 Summer Undergraduate Research Experience (SURE) is a program sponsored by the College of Computing, the Department of Applied
 Mathematics and Department of Computer Science, which is aimed at underrepresented minority students in Chicagoland.  The program collaborates with local community colleges and Northeastern Illinois University, a minority serving institution.  Our summer program will collaborate with SURE to recruit and sponsor students interested in the research topics that we are offering.
  
  
-\subsection*{Graduate summer program} \FredNote{I do not understand this program and if or how it syncs with the undergraduate one.  Will our PhD students be pulled in two directions?} We will organize two-week summer programs for  graduate students, featuring (i) presentations by RTG faculty and collaborators about background and advances  in topics related to our research  projects; (ii) presentations by postdoctoral fellows and graduate students either about their research progress or describing specific articles related to the ongoing research projects. These will provide the general background
-information in the form accessible to undergraduate students.  A goal of   this summer program is to excite new students and inspire existing trainees in this RTG. 
+%\subsection*{Graduate summer program} \FredNote{I do not understand this program and if or how it syncs with the undergraduate one.  Will our PhD students be pulled in two directions?} We will organize two-week summer programs for  graduate students, featuring (i) presentations by RTG faculty and collaborators about background and advances  in topics related to our research  projects; (ii) presentations by postdoctoral fellows and graduate students either about their research progress or describing specific articles related to the ongoing research projects. These will provide the general background information in the form accessible to undergraduate students.  A goal of   this summer program is to excite new students and inspire existing trainees in this RTG. 
 
-We plan to have this summer program to be held at Illinois Tech in Years 1, 3 and 5, and at Argonne National Lab in Years 2 and 4. 
+%We plan to have this summer program to be held at Illinois Tech in Years 1, 3 and 5, and at Argonne National Lab in Years 2 and 4. 
 
 
 
@@ -506,7 +500,7 @@ We plan to have this summer program to be held at Illinois Tech in Years 1, 3 an
 
 \subsection*{Socially Responsible Modeling, Computation, and Design
 (SoReMo)}
-This new initiative at Illinois Tech led by one of our applied mathematics colleagues advocates for ethical, equitable approaches in computation,
+This new initiative at Illinois Tech led by Sonja Petrovi\'c (Applied Math) advocates for ethical, equitable approaches in computation,
 modeling, and design, contributing to the common good of Chicago and
 beyond through research and education initiatives at Illinois Tech.
 SoReMo holds the forum,  a public bimonthly seminar to help us advance
@@ -514,7 +508,7 @@ our mission by shaping conversations and providing guidance to our
 student Fellows. Learn from international expert speakers from academia
 and industry about cutting edge topics in the area of social responsibility.
 SoReMo is also offering to support students with semester-long fellowships.   
-\FredNote{Unsure how our research connects with SoReMo.  Needs to be clearer.}
+With this proposal, we will incorporate the students with the projects that are relevant to aspects of social responsibility and could have impact to social justice, including those on the ocean-geography dynamic that is crucial in understanding the global warming, the biology system that is related to public health, the engineering applications on battery, fuel cell and clean energy.
 
 \subsection*{Workshop on Diversity, Equity and Inclusion (DEI)}
 Building on our collaboration with Argonne, we plan to co-organize this DEI workshop with the Division of Mathematics and Computer Science Division, whose director, Valerie Taylor, is an African American female, and Illinois Tech's future Vice President for DEI.  The workshop will consist of two parts: i) encouraging underrepresented groups to pursue STEM careers, and ii) teaching faculty, postdocs, and students how to support and advocate for underrepresented groups.
